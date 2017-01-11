@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+        android:padding="5dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        android:elevation="0dp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/artist_video_row">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/artist_image"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_width="55dp"-->
+                <!--android:layout_marginTop="9dp"-->
+                <!--android:layout_marginLeft="10dp" />-->
+
+            <ImageView
+                android:id="@+id/artist_image"
+                android:layout_alignParentStart="true"
+                android:layout_width="85dp"
+                android:layout_height="55dp" />
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start"
+                android:orientation="vertical"
+                android:id="@+id/artist_shows_row"
+                android:padding="10dp"
+                android:layout_toRightOf="@+id/artist_image">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/artist_shows_details"
+                    app:layout_widthPercent="90%">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="artist name"
+                        android:id="@+id/artist_name"
+                        android:lines="1"
+                        android:paddingLeft="5dp"
+                        android:textSize="25sp"
+                        android:textStyle="normal|bold"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="end"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/list_item_genre_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/arrow_down"
+                    app:layout_widthPercent="10%"
+                    android:layout_toRightOf="@+id/artist_shows_details"
+                    android:layout_gravity="right|center_vertical|center_horizontal"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginTop="4dp" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

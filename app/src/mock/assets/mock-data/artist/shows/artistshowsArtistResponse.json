@@ -1,0 +1,22 @@
+[
+  {
+    "setlists": {
+      "setlist": [
+        {
+          "artist": {
+            "@name": "artist1",
+            "@sortName": "artist1",
+            "@mbid": "m123"
+          }
+        },
+        {
+          "artist": {
+            "@name": "artist2",
+            "@sortName": "artist2",
+            "@mbid": "m234"
+          }
+        }
+      ]
+    }
+  }
+]

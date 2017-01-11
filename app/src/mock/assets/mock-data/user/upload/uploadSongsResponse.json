@@ -1,0 +1,27 @@
+[
+  {
+    "setlist": {
+      "sets": {
+        "set": [
+          {
+            "song": [
+              {
+                "@name": "song1"
+              },
+              {
+                "@name": "song2"
+              }
+            ]
+          },
+          {
+            "song": [
+              {
+                "@name": "song3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

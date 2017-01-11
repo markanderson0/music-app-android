@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:id="@+id/tickets_genre">
+
+            <in.srain.cube.views.GridViewWithHeaderAndFooter
+                android:id="@+id/gridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:columnWidth="180dp"
+                android:drawSelectorOnTop="true"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"
+                android:focusable="true"
+                android:clickable="true" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tickets_genre_table"
+                android:orientation="horizontal"
+                android:layout_below="@id/gridView">
+            </TableLayout>
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tickets_load_btn"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/tickets_genre_table"
+                app:bootstrapText="Load More"
+                app:bootstrapBrand="regular"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="true"/>
+        </RelativeLayout>
+
+     </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/no_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Tickets Available"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        style="@style/Widget.AppCompat.ProgressBar"
+        tools:visibility="visible"
+        android:progressTint="?attr/colorPrimary" />
+
+</RelativeLayout>

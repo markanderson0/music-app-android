@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.application">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".App"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".account.LoginActivity"
+            android:label="Log In"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".account.SignupActivity"
+            android:label="Sign Up"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".user.profile.ProfileActivity"
+            android:label="Profile"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".user.following.FollowingActivity"
+            android:label="Following"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".user.upload.UploadActivity"
+            android:label="Upload"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".user.settings.SettingsActivity"
+            android:label="Settings"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".search.SearchActivity"
+            android:label="Search"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".browse.BrowseActivity"
+            android:label="Browse"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".browse.BrowseGenreActivity"
+            android:label="Browse"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".tickets.TicketsActivity"
+            android:label="Tickets"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".tickets.ticketssearch.TicketsSearchActivity"
+            android:label="Search"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".tickets.ticketssearch.TicketsMapActivity"
+            android:label="Search"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".merch.MerchActivity"
+            android:label="Merch"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".merch.merchproduct.MerchProductActivity"
+            android:label="Merch"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".merch.merchsearch.MerchSearchActivity"
+            android:label="Merch"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".artist.ArtistActivity"
+            android:label="Artist"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".videoplayer.VideoPlayerActivity"
+            android:label="VideoPlayer"
+            android:theme="@style/AppTheme.ActionBar"
+            android:configChanges="orientation|screenSize">
+        </activity>
+    </application>
+
+</manifest>

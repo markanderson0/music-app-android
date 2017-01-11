@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/material_drawer_item_primary"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/material_drawer_vertical_padding"
+    android:paddingLeft="@dimen/material_drawer_vertical_padding"
+    android:paddingRight="@dimen/material_drawer_vertical_padding"
+    android:paddingStart="@dimen/material_drawer_vertical_padding">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical"
+        android:id="@+id/tickets_genre_row">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_name"
+            app:layout_widthPercent="70%"
+            android:layout_marginBottom="5dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/find_tickets_btn"
+            android:layout_toRightOf="@+id/artist_name"
+            app:layout_widthPercent="30%"
+            app:bootstrapText="Find Tickets"
+            app:bootstrapBrand="regular"
+            app:bootstrapSize="sm"
+            app:buttonMode="regular"
+            app:showOutline="true"
+            android:layout_height="25dp"
+            android:layout_marginBottom="5dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+</TableRow>

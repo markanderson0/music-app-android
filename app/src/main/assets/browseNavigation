@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Rock",
+    "pic": "img/browse/rock.png"
+  },
+  {
+    "name": "Indie",
+    "pic": "img/browse/indie.png"
+  },
+  {
+    "name": "Dance",
+    "pic": "img/browse/dance.png"
+  },
+  {
+    "name": "Hip Hop",
+    "pic": "img/browse/hiphop.png"
+  },
+  {
+    "name": "RnB",
+    "pic": "img/browse/rnb.png"
+  },
+  {
+    "name": "Country",
+    "pic": "img/browse/country.png"
+  },
+  {
+    "name": "Folk",
+    "pic": "img/browse/folk.png"
+  },
+  {
+    "name": "Metal",
+    "pic": "img/browse/metal.png"
+  }
+]

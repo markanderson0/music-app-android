@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Thomas Rhett",
+    "id": "6x2LnllRG5uGarZMsD4iO8",
+    "pic": "https://i.scdn.co/image/b6f50af57d85b3cbfed623f99d7460db651ac3be"
+  },
+  {
+    "name": "Sturgill Simpson",
+    "id": "3vDpQbGnzRbRVirXlfQagB",
+    "pic": "https://i.scdn.co/image/8898afe866dd37ba3163279ca040c750cb33d138"
+  },
+  {
+    "name": "Trent Harmon",
+    "id": "1YSoHvvSAY0oOJW7VxJx3M",
+    "pic": "https://i.scdn.co/image/63301366def719ff70662a4a462c6258fcc7f59b"
+  },
+  {
+    "name": "Chase Rice",
+    "id": "6pBNfggcZZDCmb0p92OnGn",
+    "pic": "https://i.scdn.co/image/5d639ac9b1e607bc8493e57c625aa05be5380ed4"
+  },
+  {
+    "name": "Granger Smith",
+    "id": "4sTFGCigAQIUiEy8wSSQNF",
+    "pic": "https://i.scdn.co/image/613c5121cb399b25f977add9c092e6bcb994b82d"
+  },
+  {
+    "name": "Dan + Shay",
+    "id": "7z5WFjZAIYejWy0NI5lv4T",
+    "pic": "https://i.scdn.co/image/c93206586c6c6374fc696285d416576503fed5bf"
+  },
+  {
+    "name": "Hunter Hayes",
+    "id": "7H6dkUChT5EoOQtUVMg4cN",
+    "pic": "https://i.scdn.co/image/691bf38e057bb7dd0250a32dd70c002e73e382d5"
+  },
+  {
+    "name": "Charles Esten",
+    "id": "5DOQ7jQ2pnXaiJiIoiEQjz",
+    "pic": "https://i.scdn.co/image/2313de7d7cd50aa8f52529cc12c6f9c2b6924c28"
+  },
+  {
+    "name": "Eric Church",
+    "id": "2IvkS5MXK0vPGnwyJsrEyV",
+    "pic": "https://i.scdn.co/image/836128f9e0bdd8baac01890e28753a9e88050c2d"
+  },
+  {
+    "name": "Kelsea Ballerini",
+    "id": "3RqBeV12Tt7A8xH3zBDDUF",
+    "pic": "https://i.scdn.co/image/75ab3d34813290c407b2d370951a57c591bd5cc1"
+  },
+  {
+    "name": "Kenny Chesney",
+    "id": "3grHWM9bx2E9vwJCdlRv9O",
+    "pic": "https://i.scdn.co/image/425c962dd31f314f6173cd82d9a0f3263b402ceb"
+  },
+  {
+    "name": "LOCASH",
+    "id": "5IcGbIAgdns0R5EJKHMjCQ",
+    "pic": "https://i.scdn.co/image/355494d85b3abd8e570858d3a16b77dd817fb7a6"
+  },
+  {
+    "name": "Jon Pardi",
+    "id": "4MoAOfV4ROWofLG3a3hhBN",
+    "pic": "https://i.scdn.co/image/cb31764bef2cd83698f1dd379496e2c357dc80b2"
+  },
+  {
+    "name": "Caitlyn Smith",
+    "id": "3uikSah4dwqwuk0EidFI4R",
+    "pic": "https://i.scdn.co/image/20eb994669855f088e09e7ac66f054d0481056cb"
+  },
+  {
+    "name": "Jason Aldean",
+    "id": "3FfvYsEGaIb52QPXhg4DcH",
+    "pic": "https://i.scdn.co/image/db0dda05d2fe4b2063ca545ede20984eaf0d562b"
+  },
+  {
+    "name": "Walker McGuire",
+    "id": "6jDzxywOhu6CcmS8MVzWlL",
+    "pic": "https://i.scdn.co/image/3c1d0c1fc63972bd64d39b411752ae3e3a015693"
+  },
+  {
+    "name": "William Michael Morgan",
+    "id": "03tfKFHhDoDqF73vCI3cxn",
+    "pic": "https://i.scdn.co/image/6347d7841bc8129fcd3309dcfe13227658364db1"
+  },
+  {
+    "name": "Maren Morris",
+    "id": "6WY7D3jk8zTrHtmkqqo5GI",
+    "pic": "https://i.scdn.co/image/b0f9ba4497f22a9a126c2c6c652f4da46d3a4cf3"
+  },
+  {
+    "name": "Brothers Osborne",
+    "id": "39NR3AUhpbbqKM33vWn2fp",
+    "pic": "https://i.scdn.co/image/abfa42412b4382068b1ef59cba76fc384a009530"
+  },
+  {
+    "name": "Luke Bryan",
+    "id": "0BvkDsjIUla7X0k6CSWh1I",
+    "pic": "https://i.scdn.co/image/beda540ce730f557fe753afe1088b3f0e3d6d37a"
+  },
+  {
+    "name": "RaeLynn",
+    "id": "5dMnvpYEfXvSexjwnSRH5n",
+    "pic": "https://i.scdn.co/image/c14b8eea4ec00e5dd7f300ca3eac8e289cf5bc93"
+  },
+  {
+    "name": "Drew Baldridge",
+    "id": "08qaG5crPMPF7i0h2wORk5",
+    "pic": "https://i.scdn.co/image/aa1b36448c989d08901e153a47785fa247de6716"
+  },
+  {
+    "name": "Ryan Hurd",
+    "id": "7lDVEkjIURPMyUYwoQRrpw",
+    "pic": "https://i.scdn.co/image/630147bf70a6340df162089248989aec2e1c0498"
+  },
+  {
+    "name": "Artists Of Then, Now & Forever",
+    "id": "0KlSW3j5fUEfej47FOrBMr",
+    "pic": "https://i.scdn.co/image/ee311574ee18ccdc11983128583a1dddfa473db1"
+  },
+  {
+    "name": "Luke Combs",
+    "id": "718COspgdWOnwOFpJHRZHS",
+    "pic": "https://i.scdn.co/image/08e8419efba7a8697c853efde6e7d19bc0c1571d"
+  },
+  {
+    "name": "LANco",
+    "id": "2lRH2dgU5Kk4Bc5phmII4T",
+    "pic": "https://i.scdn.co/image/1a9b492d71b428abc4661ac3cfbd8904643b836c"
+  },
+  {
+    "name": "Brett Young",
+    "id": "0fiWOxhsBsQQvFDtxUQWo0",
+    "pic": "https://i.scdn.co/image/cc64995562f155f0b3f3464cef113525870fdcaf"
+  },
+  {
+    "name": "Jana Kramer",
+    "id": "2PaRhxWFaqCUZybJDDoNrf",
+    "pic": "https://i.scdn.co/image/d6443428f7b9dd69feb1563605d715859516a6f3"
+  },
+  {
+    "name": "Brad Paisley",
+    "id": "13YmWQJFwgZrd4bf5IjMY4",
+    "pic": "https://i.scdn.co/image/3aca2e1142374273a12401a56e9d12dd9cfb85b0"
+  },
+  {
+    "name": "Adam Sanders",
+    "id": "17ewtqMhsRUPRdhpYLzMxg",
+    "pic": "https://i.scdn.co/image/5c1b09454f12b604fa34b95bf1113cfcaadecf1d"
+  },
+  {
+    "name": "Blake Shelton",
+    "id": "1UTPBmNbXNTittyMJrNkvw",
+    "pic": "https://i.scdn.co/image/07da16fe90dabb266a0e64e233935e0e83adb145"
+  },
+  {
+    "name": "Dylan Scott",
+    "id": "78YqeIji3mgAS2K1Maca6x",
+    "pic": "https://i.scdn.co/image/17af8f80f470203f282b7f73cabdfd4e5f5518d6"
+  },
+  {
+    "name": "Carrie Underwood",
+    "id": "4xFUf1FHVy696Q1JQZMTRj",
+    "pic": "https://i.scdn.co/image/f3f9e1e495c59e42ffbb0addd8e1db3265017698"
+  },
+  {
+    "name": "Brett Eldredge",
+    "id": "0qSX3s5pJnAlSsgsCne8Cz",
+    "pic": "https://i.scdn.co/image/1b02cd8980cdf77b8e7f899f72da52c27db2771c"
+  },
+  {
+    "name": "Tucker Beathard",
+    "id": "1FQXio7XougvCvKLIu0CCk",
+    "pic": "https://i.scdn.co/image/a3152f04889726c9c2f6b3063098c964d7d2c8c8"
+  },
+  {
+    "name": "Dustin Lynch",
+    "id": "1dID9zgn0OV0Y8ud7Mh2tS",
+    "pic": "https://i.scdn.co/image/b5efe6b9440e8e5e219e476bb6f354f4ba0bce74"
+  },
+  {
+    "name": "Cole Swindell",
+    "id": "1mfDfLsMxYcOOZkzBxvSVW",
+    "pic": "https://i.scdn.co/image/7777e6898315ea52f2c4b5eb546d8c6a1af2c59a"
+  },
+  {
+    "name": "Keith Urban",
+    "id": "0u2FHSq3ln94y5Q57xazwf",
+    "pic": "https://i.scdn.co/image/e6603fcf7317997c5d494e557a7a525b24151460"
+  },
+  {
+    "name": "Lauren Alaina",
+    "id": "1v3tdpIdBSW14rHUfiEVOv",
+    "pic": "https://i.scdn.co/image/b8d47249f5ab07ca843dbb636c7df25cfbfcf144"
+  },
+  {
+    "name": "Chris Stapleton",
+    "id": "4YLtscXsxbVgi031ovDDdh",
+    "pic": "https://i.scdn.co/image/7a253717e295e17b3a8bf36c11454dff581ecf6d"
+  },
+  {
+    "name": "Big & Rich",
+    "id": "0oBEeN6BCxEgMogzThqrPf",
+    "pic": "https://i.scdn.co/image/3dc89695aeb390074c2671c8644616e977e5fe8a"
+  },
+  {
+    "name": "Colt Ford",
+    "id": "0OpWIlokQeE7BNQMhuu2Nx",
+    "pic": "https://i.scdn.co/image/1c46e8e5ae2bc77fee78ca46be6cd7106b3d78ff"
+  },
+  {
+    "name": "Miranda Lambert",
+    "id": "66lH4jAE7pqPlOlzUKbwA0",
+    "pic": "https://i.scdn.co/image/2a3aebb3ccfb689075763648b814bfc08a9d4908"
+  },
+  {
+    "name": "Old Dominion",
+    "id": "6y8XlgIV8BLlIg1tT1R10i",
+    "pic": "https://i.scdn.co/image/f72387bd51f70ca887541b14108819fa308a0cd8"
+  },
+  {
+    "name": "The Band Perry",
+    "id": "75FnCoo4FBxH5K1Rrx0k5A",
+    "pic": "https://i.scdn.co/image/888d5d6491dab1810da6d8bfbd17267159a47380"
+  },
+  {
+    "name": "Tim McGraw",
+    "id": "6roFdX1y5BYSbp60OTJWMd",
+    "pic": "https://i.scdn.co/image/871e1b3d798a9e8621512923c92ff0bad842db0f"
+  },
+  {
+    "name": "Dierks Bentley",
+    "id": "7x8nK0m0cP2ksQf0mjWdPS",
+    "pic": "https://i.scdn.co/image/25279c9037df7e037481dbf3449f142723eb79d0"
+  },
+  {
+    "name": "Brandy Clark",
+    "id": "5vMAKlvvMNSRQRYCAvpG6S",
+    "pic": "https://i.scdn.co/image/1394c11fdba02df1a7aec7c9448390f1cfb8437d"
+  }
+]

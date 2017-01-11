@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/material_drawer_item_primary"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/material_drawer_vertical_padding"
+    android:paddingLeft="@dimen/material_drawer_vertical_padding"
+    android:paddingRight="@dimen/material_drawer_vertical_padding"
+    android:paddingStart="@dimen/material_drawer_vertical_padding">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical"
+        android:id="@+id/search_drawer_item">
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_height="wrap_content"
+            android:id="@+id/search_input"
+            app:layout_widthPercent="80%"
+            android:singleLine="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/search_btn"
+            app:fontAwesomeIcon="fa_search"
+            android:layout_toRightOf="@+id/search_input"
+            app:bootstrapBrand="secondary"
+            app:layout_widthPercent="20%"
+            android:layout_height="29dp" />
+
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

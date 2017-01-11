@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:text="Log in using your user name, Facebook or Twitter."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_label"
+            tools:text="Log in using your user name, Facebook or Twitter."
+            android:textAlignment="center"
+            android:layout_marginTop="25dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:text="Facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_fb_btn"
+                android:layout_weight="1"
+                app:bootstrapText="{fa_facebook-official} Facebook"
+                android:layout_marginRight="5dp" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:text="Twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_twt_btn"
+                android:layout_weight="1"
+                app:bootstrapText="{fa_twitter-square} Twitter"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_username_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_height="wrap_content"
+            android:id="@+id/login_username_input"
+            android:layout_gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:text="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_password_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_height="wrap_content"
+            android:id="@+id/login_password_input"
+            android:layout_gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+        <CheckBox
+            android:text="Remember Me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_remember_cb"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/login_submit_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            app:bootstrapText="Log In"
+            app:paddingEnd="15dp"
+            app:bootstrapBrand="regular"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:showOutline="true"/>
+
+
+    </LinearLayout>
+</ScrollView>

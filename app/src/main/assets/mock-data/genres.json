@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "genres": [
+        {
+          "genre": "rock",
+          "playlists": [
+            {
+              "userName": "spotify",
+              "id": "0lbtgFu3JNKX77J5YOpW7n",
+              "artists": [
+                {
+                  "name": "Radiohead",
+                  "id": "4Z8W4fKeB5YxbusRsdQVPb",
+                  "pic": ".../..jpg"
+                }
+              ]
+            },
+            {
+              "userName": "spotify_uk_",
+              "id": "3jgQOc0rIN5POlnuVof0ck",
+              "artists": [
+                {
+                  "name": "Radiohead",
+                  "id": "4Z8W4fKeB5YxbusRsdQVPb",
+                  "pic": ".../..jpg"
+                }
+              ]
+            },
+            {
+              "userName": "spotify",
+              "id": "49rhYazWkqe8Ojb5n2NRQI",
+              "artists": [
+                {
+                  "name": "Radiohead",
+                  "id": "4Z8W4fKeB5YxbusRsdQVPb",
+                  "pic": ".../..jpg"
+                }
+              ]
+            },
+            {
+              "userName": "spotify",
+              "id": "2YoVrFsJPvunjHQYfM12cP",
+              "artists": [
+                {
+                  "name": "Radiohead",
+                  "id": "4Z8W4fKeB5YxbusRsdQVPb",
+                  "pic": ".../..jpg"
+                }
+              ]
+            },
+            {
+              "userName": "spotify",
+              "id": "0JHYU9yefyVvlYAi2WTdKc",
+              "artists": [
+                {
+                  "name": "Radiohead",
+                  "id": "4Z8W4fKeB5YxbusRsdQVPb",
+                  "pic": ".../..jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

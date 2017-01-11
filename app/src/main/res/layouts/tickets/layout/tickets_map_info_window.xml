@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ticket_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ticket Name" />
+
+    <TextView
+        android:id="@+id/ticket_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ticket Date" />
+
+    <TextView
+        android:id="@+id/ticket_venue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ticket Venue" />
+
+    <View
+        android:id="@+id/ticket_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>

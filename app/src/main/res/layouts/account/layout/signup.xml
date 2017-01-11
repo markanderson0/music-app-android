@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@android:color/white">
+
+        <TextView
+            android:text="Sign Up using your email address, Facebook or Twitter."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_label"
+            tools:text="Sign Up using your email address, Facebook or Twitter."
+            android:textAlignment="center"
+            android:layout_marginTop="25dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:text="Facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_fb_btn"
+                android:layout_weight="1"
+                app:bootstrapText="{fa_facebook-official} Facebook"
+                android:layout_marginRight="5dp" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:text="Twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_twt_btn"
+                android:layout_weight="1"
+                app:bootstrapText="{fa_twitter-square} Twitter"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_username_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_username_input"
+            android:layout_gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:text="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_email_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_email_input"
+            android:layout_gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:text="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_password_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_password_input"
+            android:layout_gravity="center"
+            android:paddingRight="30dp"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+
+        <TextView
+            android:text="Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_gender_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/signup_gender">
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_female_input"
+                android:paddingRight="30dp"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:text="Female"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_male_input"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:text="Male"
+                android:layout_weight="1"
+                android:layout_marginRight="39dp" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:text="Date of Birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_dob_label"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_day_input"
+                android:layout_gravity="center"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:hint="Day" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_month_input"
+                android:layout_gravity="center"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:hint="Month" />
+
+            <com.beardedhen.androidbootstrap.BootstrapEditText
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_year_input"
+                android:layout_gravity="center"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_marginRight="30dp"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:layout_marginLeft="-20dp"
+                android:hint="Year" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:text="Terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_terms_cb"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/signup_submit_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            app:bootstrapText="Sign Up"
+            app:paddingEnd="15dp"
+            app:bootstrapBrand="regular"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"
+            app:showOutline="true"
+            android:layout_marginBottom="20dp" />
+
+
+    </LinearLayout>
+ </ScrollView>

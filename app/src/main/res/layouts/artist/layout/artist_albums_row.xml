@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-10dp"
+    android:elevation="0dp"
+    android:padding="0dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/artist_albums_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/artist_albums_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            app:layout_widthPercent="50%">
+
+            <ImageView
+                android:id="@+id/album_cover"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="left" />
+
+            <TextView
+                android:id="@+id/album_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AlbumsName"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/album_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ReleaseDate" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/album_tracks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/artist_albums_details"
+            android:orientation="vertical"
+            app:layout_widthPercent="50%"></LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.v7.widget.CardView>

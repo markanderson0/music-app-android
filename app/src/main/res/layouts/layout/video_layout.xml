@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/grid_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RelativeLayout03"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/video_image">
+
+        <ImageView
+            android:id="@+id/video_image"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:background="#CCFFFFFF"
+            android:text="Now Playing"
+            android:id="@+id/video_playing"
+            android:visibility="invisible"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/video_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:text="rating"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:background="#CC000000"
+            android:textColor="@android:color/white"
+            android:maxWidth="180dp"
+            android:layout_gravity="top|left"
+            app:bootstrapBrand="secondary" />
+
+            <TextView
+                android:id="@+id/video_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="marquee"
+                android:text="time"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:background="#CC000000"
+                android:textColor="@android:color/white"
+                android:maxWidth="50dp"
+                android:layout_alignParentLeft="false"
+                android:layout_marginTop="81dp" />
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/video_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="views"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:background="#CC000000"
+                android:textColor="@android:color/white"
+                app:bootstrapBrand="secondary"
+                android:layout_marginTop="81dp"
+                android:hapticFeedbackEnabled="false"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true" />
+
+        <TextView
+            android:text="Songs"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_songs"
+            android:lines="1"
+            android:ellipsize="marquee"
+            android:layout_below="@+id/video_image"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/artist_shows_cardview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    android:layout_marginBottom="-10dp"
+    android:padding="0dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp"
+    android:elevation="0dp">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/artist_shows_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|start"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/artist_shows_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_widthPercent="70%">
+
+            <TextView
+                android:id="@+id/artist_name"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="artist name"
+                android:lines="1"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:scrollHorizontally="true"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/artist_shows_date"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="ticket date"
+                android:paddingLeft="5dp"
+                android:textSize="12sp"
+                android:textStyle="normal|italic"
+                android:textColor="@color/bootstrap_gray"/>
+
+            <TextView
+                android:id="@+id/artist_shows_venue"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="ticket venue"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/artist_shows_location"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="ticket location"
+                android:paddingLeft="5dp"/>
+
+        </LinearLayout>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/artist_setlist_btn"
+            android:layout_toRightOf="@+id/artist_shows_details"
+            android:layout_height="30dp"
+            app:layout_widthPercent="30%"
+            app:bootstrapText="Setlist"
+            app:bootstrapBrand="regular"
+            app:bootstrapSize="md"
+            app:buttonMode="regular"
+            app:showOutline="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_centerVertical="true" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.v7.widget.CardView>

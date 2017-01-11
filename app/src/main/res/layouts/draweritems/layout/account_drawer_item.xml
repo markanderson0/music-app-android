@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/material_drawer_item_primary"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/material_drawer_vertical_padding"
+    android:paddingLeft="@dimen/material_drawer_vertical_padding"
+    android:paddingRight="@dimen/material_drawer_vertical_padding"
+    android:paddingStart="@dimen/material_drawer_vertical_padding">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|start"
+        android:orientation="horizontal"
+        android:id="@+id/account_drawer_item"
+        android:weightSum="2">
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/drawer_login"
+            app:bootstrapText="Log In"
+            app:paddingEnd="15dp"
+            android:layout_marginRight="5dp"
+            app:bootstrapBrand="secondary"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/drawer_signup"
+            android:layout_alignRight="@+id/drawer_login"
+            app:bootstrapText="Sign Up"
+            android:layout_marginLeft="5dp"
+            app:bootstrapBrand="secondary"
+            app:bootstrapSize="lg"
+            app:buttonMode="regular"/>
+
+    </LinearLayout>
+</LinearLayout>
