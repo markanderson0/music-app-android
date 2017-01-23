@@ -49,12 +49,12 @@ public class MerchSearchActivityTest {
     @Test
     public void merchSearch_DisplayCorrectMerch_DisplayResults() {
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.merch_grid_item_name)).check(matches(withText(MERCH_NAME)));
 
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.merch_grid_item_price)).check(matches(withText(MERCH_PRICE)));
     }
@@ -62,7 +62,7 @@ public class MerchSearchActivityTest {
     @Test
     public void merchSearch_ClickMerchItem_OpenMerchProductActivityWithExtras() {
         onData(Matchers.anything())
-                .inAdapterView(Matchers.allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(Matchers.allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0).perform(click());
         intended(hasComponent(MerchProductActivity.class.getName()));
         intended(hasExtra("name", MERCH_NAME));

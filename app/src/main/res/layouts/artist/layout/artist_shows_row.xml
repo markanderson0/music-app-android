@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/artist_shows_cardview"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardUseCompatPadding="true"
     android:layout_marginBottom="-10dp"
+    android:elevation="0dp"
     android:padding="0dp"
     app:cardCornerRadius="0dp"
     app:cardElevation="4dp"
-    android:elevation="0dp">
+    app:cardUseCompatPadding="true">
 
     <android.support.percent.PercentRelativeLayout
         android:id="@+id/artist_shows_row"
@@ -29,55 +29,55 @@
 
             <TextView
                 android:id="@+id/artist_name"
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="artist name"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
                 android:lines="1"
                 android:paddingLeft="5dp"
-                android:textSize="18sp"
-                android:textStyle="normal|bold"
                 android:scrollHorizontally="true"
-                android:ellipsize="end" />
+                android:text="artist name"
+                android:textSize="18sp"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:id="@+id/artist_shows_date"
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="ticket date"
+                android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
+                android:text="ticket date"
+                android:textColor="@color/bootstrap_gray"
                 android:textSize="12sp"
-                android:textStyle="normal|italic"
-                android:textColor="@color/bootstrap_gray"/>
+                android:textStyle="normal|italic" />
 
             <TextView
                 android:id="@+id/artist_shows_venue"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="ticket venue"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
                 android:paddingTop="5dp"
-                android:paddingLeft="5dp"/>
+                android:text="ticket venue" />
 
             <TextView
                 android:id="@+id/artist_shows_location"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="ticket location"
-                android:paddingLeft="5dp"/>
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="ticket location" />
 
         </LinearLayout>
 
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/artist_setlist_btn"
-            android:layout_toRightOf="@+id/artist_shows_details"
             android:layout_height="30dp"
-            app:layout_widthPercent="30%"
-            app:bootstrapText="Setlist"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/artist_shows_details"
+            android:gravity="center_vertical|center_horizontal"
             app:bootstrapBrand="regular"
             app:bootstrapSize="md"
+            app:bootstrapText="Setlist"
             app:buttonMode="regular"
-            app:showOutline="true"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_centerVertical="true" />
+            app:layout_widthPercent="30%"
+            app:showOutline="true" />
 
     </android.support.percent.PercentRelativeLayout>
 

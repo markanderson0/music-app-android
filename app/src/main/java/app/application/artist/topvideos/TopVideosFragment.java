@@ -28,11 +28,11 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class TopVideosFragment extends Fragment implements TopVideosContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
-    @BindView(R.id.noResults)
+    @BindView(R.id.no_results)
     TextView noResults;
 
     @Inject
@@ -102,7 +102,7 @@ public class TopVideosFragment extends Fragment implements TopVideosContract.Vie
     }
 
     //TODO: Get video playlist from id
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void OnItemClick(View view, int position) {
         Intent videoPlayerIntent = new Intent(view.getContext(), VideoPlayerActivity.class);
         videoPlayerIntent.putExtra("videoId", gridData.get(position).getVideoId());

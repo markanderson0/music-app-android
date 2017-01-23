@@ -36,12 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
+        android:layout_marginTop="250dp"
         android:background="#CC000000"
         android:gravity="center"
         android:minHeight="42dp"
         android:orientation="horizontal"
-        android:padding="9dp"
-        android:layout_marginTop="250dp">
+        android:padding="9dp">
 
         <ImageButton
             android:id="@+id/bottom_pause"
@@ -97,17 +97,17 @@
         android:id="@+id/layout_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
         android:layout_centerInParent="false"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="85dp"
-        android:layout_marginLeft="130dp">
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/image_center_bg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/video_volume_bg"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:src="@drawable/video_volume_bg" />
 
         <ProgressBar
             android:id="@+id/progress_center"

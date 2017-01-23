@@ -29,11 +29,11 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class TopTicketsFragment extends Fragment implements TopTicketsContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
-    @BindView(R.id.noResults)
+    @BindView(R.id.no_results)
     TextView noResults;
 
     private GridViewAdapter mGridAdapter;
@@ -102,7 +102,7 @@ public class TopTicketsFragment extends Fragment implements TopTicketsContract.V
         noResults.setVisibility(View.GONE);
     }
 
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void onItemClick(View view) {
         TextView mGenreLabel = ButterKnife.findById(view, R.id.grid_item_title);
         Intent ticketsSearchIntent = new Intent(getActivity(), TicketsSearchActivity.class);

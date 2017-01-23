@@ -33,9 +33,9 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class TicketsGenreFragment extends Fragment implements TicketsGenreContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.no_tickets)
     TextView noTickets;
@@ -120,7 +120,7 @@ public class TicketsGenreFragment extends Fragment implements TicketsGenreContra
         }
     }
 
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void onItemClick(View view) {
         TextView mGenreLabel = ButterKnife.findById(view, R.id.grid_item_title);
         Intent ticketsSearchIntent = new Intent(getActivity(), TicketsSearchActivity.class);
@@ -139,6 +139,7 @@ public class TicketsGenreFragment extends Fragment implements TicketsGenreContra
         gridView.setVisibility(View.GONE);
         noTickets.setText(message);
         noTickets.setVisibility(View.VISIBLE);
+        loadBtn.setVisibility(View.INVISIBLE);
     }
 
     @Override

@@ -43,7 +43,7 @@ public class TopTicketsFragmentTest {
     @Test
     public void topTickets_DisplayCorrectTickets_DisplayResults() {
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText("artist1")));
     }
@@ -51,7 +51,7 @@ public class TopTicketsFragmentTest {
     @Test
     public void topTickets_ClickArtistInGrid_OpenTicketsSearchActivityWithExtras(){
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0).perform(click());
         intended(hasComponent(TicketsSearchActivity.class.getName()));
         intended(hasExtra("search", "artist1"));

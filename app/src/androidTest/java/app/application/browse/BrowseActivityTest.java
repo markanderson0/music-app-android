@@ -33,7 +33,7 @@ public class BrowseActivityTest {
     @Test
     public void browse_DisplayBrowseNavigationGenres() {
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText("Genre")));
     }
@@ -41,7 +41,7 @@ public class BrowseActivityTest {
     @Test
     public void browse_ClickOnGenreTile_OpenBrowseGenreActivityWithExtras() {
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).perform(click());
 

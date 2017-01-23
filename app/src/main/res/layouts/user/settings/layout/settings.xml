@@ -13,9 +13,9 @@
             android:id="@+id/settings_tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabIndicatorColor="?android:attr/textColorPrimaryDisableOnly"
             app:tabMode="scrollable"
-            app:tabTextAppearance="@style/TextAppearance.StatusBar.EventContent"
-            app:tabIndicatorColor="?android:attr/textColorPrimaryDisableOnly" />
+            app:tabTextAppearance="@style/TextAppearance.StatusBar.EventContent" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -23,5 +23,6 @@
         android:id="@+id/settings_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
 </LinearLayout>

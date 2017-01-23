@@ -26,11 +26,11 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class BrowseActivity extends DrawerActivity implements View.OnClickListener, BrowseContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
-    @BindView(R.id.noResults)
+    @BindView(R.id.no_results)
     TextView noResults;
 
     @Inject
@@ -97,7 +97,7 @@ public class BrowseActivity extends DrawerActivity implements View.OnClickListen
         noResults.setVisibility(View.GONE);
     }
 
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void onClick(View view) {
         TextView genreLabel = ButterKnife.findById(view, R.id.grid_item_title);
         Intent browseGenreIntent = new Intent(getActivity(), BrowseGenreActivity.class);

@@ -5,19 +5,19 @@
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardUseCompatPadding="true"
     android:layout_marginTop="-10dp"
+    android:elevation="0dp"
     android:padding="5dp"
     app:cardCornerRadius="0dp"
     app:cardElevation="4dp"
-    android:elevation="0dp"
     app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:padding="5dp">
 
         <TextView
@@ -29,12 +29,12 @@
             tools:text="Artist Name" />
 
         <android.support.v17.leanback.widget.HorizontalGridView
-            android:id="@+id/gridView"
+            android:id="@+id/grid_view"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:measureAllChildren="false"
             android:layout_alignParentTop="true"
-            android:fillViewport="true"/>
+            android:fillViewport="true"
+            android:measureAllChildren="false" />
 
     </LinearLayout>
 

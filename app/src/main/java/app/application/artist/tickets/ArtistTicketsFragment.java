@@ -28,9 +28,9 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class ArtistTicketsFragment extends Fragment implements TicketsSearchContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter mGridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.no_tickets)
     TextView noTickets;

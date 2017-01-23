@@ -27,9 +27,9 @@ public class VideosFragment extends Fragment implements VideosContract.View {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
-    @BindView(R.id.noResults)
+    @BindView(R.id.no_results)
     TextView noResults;
 
     @Inject

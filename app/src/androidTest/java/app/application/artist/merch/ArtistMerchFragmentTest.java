@@ -51,12 +51,12 @@ public class ArtistMerchFragmentTest {
     @Test
     public void artistMerch_DisplayCorrectMerch_DisplayResults() {
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.merch_grid_item_name)).check(matches(withText(MERCH_NAME)));
 
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.merch_grid_item_price)).check(matches(withText(MERCH_PRICE)));
     }

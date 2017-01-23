@@ -27,11 +27,11 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class FollowingActivity extends DrawerActivity implements FollowingContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
-    @BindView(R.id.noResults)
+    @BindView(R.id.no_results)
     TextView noResults;
 
     @Inject
@@ -69,7 +69,7 @@ public class FollowingActivity extends DrawerActivity implements FollowingContra
         }
     }
 
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void onItemClick(View view, int position) {
         TextView mGenreLabel = ButterKnife.findById(view, R.id.grid_item_title);
         Intent artistIntent = new Intent(getActivity(), ArtistActivity.class);

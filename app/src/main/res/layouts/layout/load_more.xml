@@ -6,19 +6,19 @@
     android:background="#fff">
 
     <com.beardedhen.androidbootstrap.BootstrapButton
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:id="@+id/browse_load_btn"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="10dp"
-    android:layout_marginRight="5dp"
-    android:layout_marginLeft="5dp"
-    app:bootstrapText="Load More"
-    app:bootstrapBrand="regular"
-    app:bootstrapSize="lg"
-    app:buttonMode="regular"
-    app:showOutline="true"/>
+        android:id="@+id/browse_load_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        app:bootstrapBrand="regular"
+        app:bootstrapSize="lg"
+        app:bootstrapText="Load More"
+        app:buttonMode="regular"
+        app:showOutline="true" />
 
 </FrameLayout>
 

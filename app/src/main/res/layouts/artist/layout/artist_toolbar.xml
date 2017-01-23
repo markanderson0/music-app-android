@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
-    tools:context="com.example.mark.myapplication.artist.ArtistActivity"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    app:layout_collapseMode="parallax">
+    app:layout_collapseMode="parallax"
+    tools:context="artist.ArtistActivity">
 
     <include layout="@layout/content_main" />
 

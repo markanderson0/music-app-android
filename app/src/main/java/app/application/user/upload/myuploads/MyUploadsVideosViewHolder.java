@@ -21,7 +21,7 @@ public class MyUploadsVideosViewHolder extends ChildViewHolder {
     public MyUploadsVideosViewHolder(final View itemView) {
         super(itemView);
         childTextView = (TextView) itemView.findViewById(R.id.list_item_artist_name);
-        gridView = (HorizontalGridView) itemView.findViewById(R.id.gridView);
+        gridView = (HorizontalGridView) itemView.findViewById(R.id.grid_view);
     }
 
     public void onBind(Show show) {

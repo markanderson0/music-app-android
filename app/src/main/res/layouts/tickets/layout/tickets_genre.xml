@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,68 +12,67 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
+            android:id="@+id/tickets_genre"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fff"
-            android:id="@+id/tickets_genre">
+            android:background="#fff">
 
             <in.srain.cube.views.GridViewWithHeaderAndFooter
-                android:id="@+id/gridView"
+                android:id="@+id/grid_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:clickable="true"
                 android:columnWidth="180dp"
                 android:drawSelectorOnTop="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:numColumns="auto_fit"
                 android:stretchMode="columnWidth"
-                android:verticalSpacing="5dp"
-                android:focusable="true"
-                android:clickable="true" />
+                android:verticalSpacing="5dp" />
 
             <TableLayout
+                android:id="@+id/tickets_genre_table"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/tickets_genre_table"
-                android:orientation="horizontal"
-                android:layout_below="@id/gridView">
-            </TableLayout>
+                android:layout_below="@id/grid_view"
+                android:orientation="horizontal"></TableLayout>
 
             <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/tickets_load_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/tickets_load_btn"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
                 android:layout_below="@id/tickets_genre_table"
-                app:bootstrapText="Load More"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
                 app:bootstrapBrand="regular"
                 app:bootstrapSize="lg"
+                app:bootstrapText="Load More"
                 app:buttonMode="regular"
-                app:showOutline="true"/>
+                app:showOutline="true" />
         </RelativeLayout>
 
-     </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/no_tickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Tickets Available"
         android:layout_centerInParent="true"
-        android:visibility="visible"/>
+        android:text="No Tickets Available"
+        android:visibility="visible" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:progressTint="?attr/colorPrimary"
         android:visibility="gone"
-        style="@style/Widget.AppCompat.ProgressBar"
-        tools:visibility="visible"
-        android:progressTint="?attr/colorPrimary" />
+        tools:visibility="visible" />
 
 </RelativeLayout>

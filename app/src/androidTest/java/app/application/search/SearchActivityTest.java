@@ -45,15 +45,15 @@ public class SearchActivityTest {
 
     @Test
     public void search_DisplayCorrectSearchResults_DisplayResults() {
-        onView(ViewMatchers.withId(R.id.gridView)).check(matches(isDisplayed()));
+        onView(ViewMatchers.withId(R.id.grid_view)).check(matches(isDisplayed()));
 
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText("artist1")));
 
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(1)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText("artist2")));
     }

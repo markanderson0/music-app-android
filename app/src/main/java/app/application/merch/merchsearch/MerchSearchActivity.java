@@ -35,9 +35,9 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class MerchSearchActivity extends DrawerActivity implements View.OnClickListener, MerchContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter mGridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.no_merch)
     TextView noMerch;
@@ -141,7 +141,7 @@ public class MerchSearchActivity extends DrawerActivity implements View.OnClickL
         noMerch.setVisibility(View.GONE);
     }
 
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void onClick(View view) {
         if(view.getId() == R.id.browse_load_btn) {
             merchPresenter.getMerch(getIntent().getExtras().getString("search"), "11450", "BestMatch");

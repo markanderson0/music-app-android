@@ -27,9 +27,9 @@ public class ArtistVideosFragment extends Fragment implements ArtistVideosContra
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
-    @BindView(R.id.noResults)
+    @BindView(R.id.no_results)
     TextView noResults;
 
     @Inject

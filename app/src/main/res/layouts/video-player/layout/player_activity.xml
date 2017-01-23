@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2016 The Android Open Source Project
+<?xml version="1.0" encoding="UTF-8"?><!-- Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,23 +13,24 @@
      limitations under the License.
 -->
 <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/root"
-        android:focusable="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusable="true"
         android:keepScreenOn="true"
         app:layout_heightPercent="35.5%">
 
-        <com.google.android.exoplayer2.ui.SimpleExoPlayerView android:id="@+id/player_view"
-            android:focusable="true"
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/player_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:focusable="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,25 +39,28 @@
             android:orientation="vertical"
             android:visibility="invisible">
 
-            <TextView android:id="@+id/debug_text_view"
+            <TextView
+                android:id="@+id/debug_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"
                 android:textSize="10sp"
-                tools:ignore="SmallSp"/>
+                tools:ignore="SmallSp" />
 
-            <LinearLayout android:id="@+id/controls_root"
+            <LinearLayout
+                android:id="@+id/controls_root"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
 
-                <Button android:id="@+id/retry_button"
+                <Button
+                    android:id="@+id/retry_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/retry"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -68,18 +71,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        app:layout_heightPercent="64.5%"
-        android:layout_alignParentBottom="true">
+        app:layout_heightPercent="64.5%">
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardUseCompatPadding="true"
+            android:elevation="0dp"
             android:padding="5dp"
             app:cardCornerRadius="0dp"
             app:cardElevation="4dp"
-            android:elevation="0dp">
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,11 +90,11 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/video_songs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/video_songs"
-                    android:text="Songs"
                     android:padding="5dp"
+                    android:text="Songs"
                     android:textSize="18sp" />
 
 
@@ -102,85 +105,85 @@
                     android:orientation="horizontal">
 
                     <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/videos_views"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/videos_views"
-                        android:text="views"
-                        android:padding="5dp"/>
+                        android:padding="5dp"
+                        android:text="views" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" | "/>
+                        android:text=" | " />
 
                     <com.beardedhen.androidbootstrap.AwesomeTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:id="@+id/video_audio_rating"
-                        android:text="audio rating"
-                        android:padding="5dp"/>
-
-                    <com.beardedhen.androidbootstrap.AwesomeTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="audio rating" />
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
                         android:id="@+id/video_video_rating"
-                        android:text="video rating"
-                        android:padding="5dp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="video rating" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ratings"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:id="@+id/ratings">
+                    android:orientation="horizontal">
 
                     <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/rate_audio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/rate_audio"
                         android:layout_margin="5dp"
-                        app:bootstrapText="Rate Audio {fa_volume_off} {fa_caret_down}"
                         app:bootstrapBrand="regular"
+                        app:bootstrapSize="sm"
+                        app:bootstrapText="Rate Audio {fa_volume_off} {fa_caret_down}"
                         app:roundedCorners="false"
-                        app:showOutline="true"
-                        app:bootstrapSize="sm"/>
+                        app:showOutline="true" />
 
                     <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/rated_audio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/rated_audio"
                         android:layout_margin="5dp"
                         android:visibility="gone" />
 
                     <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/rate_video"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/rate_video"
                         android:layout_margin="5dp"
-                        app:bootstrapText="Rate Video {fa_video_camera} {fa_caret_down}"
                         app:bootstrapBrand="regular"
+                        app:bootstrapSize="sm"
+                        app:bootstrapText="Rate Video {fa_video_camera} {fa_caret_down}"
                         app:roundedCorners="false"
-                        app:showOutline="true"
-                        app:bootstrapSize="sm"/>
+                        app:showOutline="true" />
 
                     <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/rated_video"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/rated_video"
                         android:layout_margin="5dp"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
 
                     <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/favourite_video"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/favourite_video"
                         android:layout_margin="5dp"
-                        app:bootstrapText="Favourite {fa_star_o}"
                         app:bootstrapBrand="regular"
+                        app:bootstrapSize="sm"
+                        app:bootstrapText="Favourite {fa_star_o}"
                         app:roundedCorners="false"
-                        app:showOutline="true"
-                        app:bootstrapSize="sm"/>
+                        app:showOutline="true" />
 
                 </LinearLayout>
 
@@ -191,31 +194,31 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardUseCompatPadding="true"
+            android:elevation="0dp"
             android:padding="5dp"
             app:cardCornerRadius="0dp"
             app:cardElevation="4dp"
-            android:elevation="0dp">
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:padding="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/more_videos"
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/more_videos" />
 
                 <android.support.v17.leanback.widget.HorizontalGridView
-                    android:id="@+id/gridView"
+                    android:id="@+id/grid_view"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:measureAllChildren="false"
                     android:layout_alignParentTop="true"
-                    android:fillViewport="true"/>
+                    android:fillViewport="true"
+                    android:measureAllChildren="false" />
 
             </LinearLayout>
 

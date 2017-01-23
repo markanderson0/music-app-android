@@ -18,7 +18,7 @@ public class FavouritesVideoViewHolder extends ChildViewHolder {
 
     public FavouritesVideoViewHolder(View itemView) {
         super(itemView);
-        gridView = ButterKnife.findById(itemView, R.id.gridView);
+        gridView = ButterKnife.findById(itemView, R.id.grid_view);
     }
 
     public void onBind(FavouritesModel favourite) {

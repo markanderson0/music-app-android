@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/material_drawer_item_primary"
     android:orientation="horizontal"
@@ -11,37 +10,38 @@
     android:paddingStart="@dimen/material_drawer_vertical_padding">
 
     <LinearLayout
+        android:id="@+id/account_drawer_item"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_vertical|start"
         android:orientation="horizontal"
-        android:id="@+id/account_drawer_item"
         android:weightSum="2">
 
         <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/drawer_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/drawer_login"
-            app:bootstrapText="Log In"
-            app:paddingEnd="15dp"
             android:layout_marginRight="5dp"
+            android:layout_weight="1"
             app:bootstrapBrand="secondary"
             app:bootstrapSize="lg"
-            app:buttonMode="regular" />
+            app:bootstrapText="Log In"
+            app:buttonMode="regular"
+            app:paddingEnd="15dp" />
 
         <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/drawer_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/drawer_signup"
             android:layout_alignRight="@+id/drawer_login"
-            app:bootstrapText="Sign Up"
             android:layout_marginLeft="5dp"
+            android:layout_weight="1"
             app:bootstrapBrand="secondary"
             app:bootstrapSize="lg"
-            app:buttonMode="regular"/>
+            app:bootstrapText="Sign Up"
+            app:buttonMode="regular" />
 
     </LinearLayout>
+
 </LinearLayout>

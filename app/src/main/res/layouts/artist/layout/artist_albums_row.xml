@@ -38,8 +38,8 @@
                 android:id="@+id/album_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AlbumsName"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:text="AlbumsName" />
 
             <TextView
                 android:id="@+id/album_release_date"

@@ -41,25 +41,25 @@ public class TicketsSearchActivityTest {
 
         //Artist Name
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.artist_name)).check(matches(withText("artist1")));
 
         //Venue
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.ticket_venue)).check(matches(withText("venue1")));
 
         //Date
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.ticket_date)).check(matches(withText("2017-01-01")));
 
         //Location
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.ticket_location)).check(matches(withText("city1,s1 US")));
 
@@ -78,7 +78,7 @@ public class TicketsSearchActivityTest {
     public void ticketsSearch_InvalidTicketSearch_DisplaysError(){
         main.launchActivity(createIntentWithName(null));
         onView(withId(R.id.no_tickets)).check(matches(isDisplayed()));
-        onView(withId(R.id.gridView)).check(matches(not(isDisplayed())));
+        onView(withId(R.id.grid_view)).check(matches(not(isDisplayed())));
     }
 
     private static Intent createIntentWithName(String name) {

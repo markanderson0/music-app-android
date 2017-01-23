@@ -8,8 +8,7 @@
     android:orientation="vertical"
     android:padding="5dp">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/RelativeLayout03"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -22,70 +21,70 @@
             android:scaleType="centerCrop" />
 
         <TextView
+            android:id="@+id/video_playing"
             android:layout_width="180dp"
             android:layout_height="100dp"
             android:background="#CCFFFFFF"
+            android:gravity="center_vertical|center_horizontal"
             android:text="Now Playing"
-            android:id="@+id/video_playing"
-            android:visibility="invisible"
-            android:gravity="center_vertical|center_horizontal" />
+            android:visibility="invisible" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/video_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:background="#CC000000"
+            android:ellipsize="marquee"
             android:gravity="top|left"
             android:maxLines="1"
-            android:ellipsize="marquee"
+            android:maxWidth="180dp"
             android:text="rating"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:background="#CC000000"
             android:textColor="@android:color/white"
-            android:maxWidth="180dp"
-            android:layout_gravity="top|left"
             app:bootstrapBrand="secondary" />
 
-            <TextView
-                android:id="@+id/video_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:ellipsize="marquee"
-                android:text="time"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:background="#CC000000"
-                android:textColor="@android:color/white"
-                android:maxWidth="50dp"
-                android:layout_alignParentLeft="false"
-                android:layout_marginTop="81dp" />
+        <TextView
+            android:id="@+id/video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_marginTop="81dp"
+            android:background="#CC000000"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:maxWidth="50dp"
+            android:text="time"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/white" />
 
-            <com.beardedhen.androidbootstrap.AwesomeTextView
-                android:id="@+id/video_views"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:text="views"
-                android:textAppearance="@style/TextAppearance.AppCompat"
-                android:background="#CC000000"
-                android:textColor="@android:color/white"
-                app:bootstrapBrand="secondary"
-                android:layout_marginTop="81dp"
-                android:hapticFeedbackEnabled="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentStart="false"
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentEnd="false"
-                android:layout_alignParentRight="true" />
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/video_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_marginTop="81dp"
+            android:background="#CC000000"
+            android:hapticFeedbackEnabled="false"
+            android:maxLines="1"
+            android:text="views"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/white"
+            app:bootstrapBrand="secondary" />
 
         <TextView
-            android:text="Songs"
+            android:id="@+id/video_songs"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:id="@+id/video_songs"
-            android:lines="1"
-            android:ellipsize="marquee"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/video_image"
-            android:layout_alignParentStart="true" />
+            android:ellipsize="marquee"
+            android:lines="1"
+            android:text="Songs" />
 
     </RelativeLayout>
 

@@ -41,12 +41,12 @@ public class FollowingFragmentTest {
     @Test
     public void displayCorrectSearchResults() {
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText("artist3")));
 
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(1)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText("artist4")));
     }
@@ -54,7 +54,7 @@ public class FollowingFragmentTest {
     @Test
     public void following_ClickFollowingTile_OpenArtistActivityWithExtras(){
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).perform(click());
         intended(hasComponent(ArtistActivity.class.getName()));

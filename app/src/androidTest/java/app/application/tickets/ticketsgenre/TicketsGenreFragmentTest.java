@@ -47,7 +47,7 @@ public class TicketsGenreFragmentTest {
 
         //Artist in grid
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.grid_item_title)).check(matches(withText(ARTIST1)));
 
@@ -65,7 +65,7 @@ public class TicketsGenreFragmentTest {
     public void ticketsGenre_ClickArtistInGrid_OpenTicketsSearchActivityWithExtras(){
         onView(withText(ALT_INDIE_TAB)).perform(click());
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0).perform(click());
         intended(hasComponent(TicketsSearchActivity.class.getName()));
         intended(hasExtra("search", ARTIST1));

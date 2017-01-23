@@ -12,16 +12,15 @@
         android:id="@+id/video_upload_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:ellipsize="marquee"
-        android:text="Uploaded By "
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:maxWidth="180dp"
         android:layout_alignParentLeft="false"
-        android:paddingBottom="5dp"/>
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:maxWidth="180dp"
+        android:paddingBottom="5dp"
+        android:text="Uploaded By "
+        android:textAppearance="@style/TextAppearance.AppCompat" />
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/video_details"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -37,55 +36,55 @@
             android:id="@+id/video_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:background="#CC000000"
+            android:ellipsize="marquee"
             android:gravity="top|left"
             android:maxLines="1"
-            android:ellipsize="marquee"
+            android:maxWidth="180dp"
             android:text="rating"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:background="#CC000000"
             android:textColor="@android:color/white"
-            android:maxWidth="180dp"
-            android:layout_gravity="top|left"
             app:bootstrapBrand="secondary" />
 
         <TextView
             android:id="@+id/video_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:layout_alignParentLeft="false"
+            android:layout_marginTop="82dp"
+            android:background="#CC000000"
             android:ellipsize="marquee"
+            android:maxLines="1"
+            android:maxWidth="50dp"
             android:text="time"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:background="#CC000000"
-            android:textColor="@android:color/white"
-            android:maxWidth="50dp"
-            android:layout_alignParentLeft="false"
-            android:layout_marginTop="82dp" />
+            android:textColor="@android:color/white" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/video_views"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="82dp"
+            android:background="#CC000000"
             android:maxLines="1"
             android:text="views"
             android:textAppearance="@style/TextAppearance.AppCompat"
-            android:background="#CC000000"
             android:textColor="@android:color/white"
-            app:bootstrapBrand="secondary"
-            android:layout_marginTop="82dp"
-            android:layout_alignParentRight="true"
-            android:textDirection="anyRtl" />
+            android:textDirection="anyRtl"
+            app:bootstrapBrand="secondary" />
 
         <TextView
-            android:text="Songs"
+            android:id="@+id/video_songs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/video_songs"
-            android:maxLines="1"
-            android:ellipsize="marquee"
-            android:layout_below="@+id/video_image"
             android:layout_alignParentStart="true"
-            android:maxWidth="180dp"/>
+            android:layout_below="@+id/video_image"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:maxWidth="180dp"
+            android:text="Songs" />
 
     </RelativeLayout>
 

@@ -32,9 +32,9 @@ import static java.lang.Integer.parseInt;
  */
 public class ArtistShowsFragment extends Fragment implements View.OnClickListener, ArtistShowsContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.no_tickets)
     TextView noTickets;
@@ -135,6 +135,9 @@ public class ArtistShowsFragment extends Fragment implements View.OnClickListene
                 artistShowsPresenter.getArtistShows(String.valueOf(pageNum));
             });
             pagesGrid.addView(pageButtonn);
+        }
+        if(totalPages <= 1) {
+            nextBtn.setVisibility(View.INVISIBLE);
         }
     }
 

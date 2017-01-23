@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#fff"
     android:id="@+id/activity_grid_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <in.srain.cube.views.GridViewWithHeaderAndFooter
-        android:id="@+id/gridView"
+        android:id="@+id/grid_view"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
+        android:clickable="true"
         android:columnWidth="180dp"
         android:drawSelectorOnTop="true"
+        android:focusable="true"
         android:gravity="center"
+        android:nestedScrollingEnabled="true"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="5dp"
-        android:focusable="true"
-        android:clickable="true"
-        android:nestedScrollingEnabled="true" />
+        android:verticalSpacing="5dp" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:progressTint="?attr/colorPrimary"
         android:visibility="gone"
-        style="@style/Widget.AppCompat.ProgressBar"
-        tools:visibility="visible"
-        android:progressTint="?attr/colorPrimary" />
+        tools:visibility="visible" />
 
     <TextView
-        android:id="@+id/noResults"
+        android:id="@+id/no_results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="gone"
         tools:visibility="visible" />
+
 </RelativeLayout>

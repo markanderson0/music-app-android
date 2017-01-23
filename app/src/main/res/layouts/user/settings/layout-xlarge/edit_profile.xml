@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/profile_email_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="30dp"
-                android:layout_marginTop="10dp" />
+                android:text="Email" />
 
             <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:id="@+id/profile_email_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:paddingRight="30dp"
-                android:paddingLeft="30dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp" />
+                android:layout_marginRight="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/profile_dob_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date of Birth"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="30dp"
-                android:layout_marginTop="10dp" />
+                android:text="Date of Birth" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,56 +60,58 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="5dp"
-                    android:inputType="number"
                     android:layout_weight="1"
-                    android:hint="Day" />
+                    android:hint="Day"
+                    android:inputType="number"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
 
                 <com.beardedhen.androidbootstrap.BootstrapEditText
                     android:id="@+id/profile_month_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="30dp"
-                    android:inputType="number"
                     android:layout_weight="1"
-                    android:hint="Month" />
+                    android:hint="Month"
+                    android:inputType="number"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
 
                 <com.beardedhen.androidbootstrap.BootstrapEditText
                     android:id="@+id/profile_year_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
                     android:layout_marginLeft="-20dp"
                     android:layout_marginRight="30dp"
-                    android:inputType="number"
                     android:layout_weight="1"
-                    android:hint="Year" />
+                    android:hint="Year"
+                    android:inputType="number"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp" />
 
             </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
     <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/profile_submit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        app:bootstrapText="Submit Changes"
-        app:paddingEnd="15dp"
+        android:layout_marginTop="20dp"
         app:bootstrapBrand="regular"
         app:bootstrapSize="lg"
+        app:bootstrapText="Submit Changes"
         app:buttonMode="regular"
-        app:showOutline="true"/>
+        app:paddingEnd="15dp"
+        app:showOutline="true" />
 
 </LinearLayout>

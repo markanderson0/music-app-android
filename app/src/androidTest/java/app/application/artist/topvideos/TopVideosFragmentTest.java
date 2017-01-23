@@ -46,37 +46,37 @@ public class TopVideosFragmentTest {
     public void topVideos_DisplayCorrectTopVideos_DisplayResults() {
         //Upload User
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.video_upload_user)).check(matches(withText("Uploaded By testUser1")));
 
         //Audio Rating
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.video_rating)).check(matches(withText(containsString("1"))));
 
         //Video Rating
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withId(R.id.video_rating)).check(matches(withText(containsString("1"))));
 
         //Video Time
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.video_time)).check(matches(withText("20:00")));
 
         //Video Views
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.video_views)).check(matches(withText(containsString("1"))));
 
         //Video Songs
         onData(anything())
-                .inAdapterView(withId(R.id.gridView))
+                .inAdapterView(withId(R.id.grid_view))
                 .atPosition(0)
                 .onChildView(withId(R.id.video_songs)).check(matches(withText("song1")));
     }

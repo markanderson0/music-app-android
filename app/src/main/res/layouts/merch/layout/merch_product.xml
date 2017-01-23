@@ -1,100 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#f0f0f0">
 
     <RelativeLayout
+        android:id="@+id/merch_product"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/merch_product">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:padding="10dp">
 
             <ImageView
+                android:id="@+id/merch_product_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:srcCompat="@android:color/white"
-                android:id="@+id/merch_product_image"
                 android:layout_marginBottom="-6dp"
                 android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp" />
+                android:layout_marginRight="4dp"
+                app:srcCompat="@android:color/white" />
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                card_view:cardUseCompatPadding="true"
+                android:layout_margin="-5dp"
+                android:elevation="0dp"
                 card_view:cardCornerRadius="0dp"
                 card_view:cardElevation="4dp"
-                android:elevation="0dp"
-                android:layout_margin="-5dp">
+                card_view:cardUseCompatPadding="true">
 
                 <LinearLayout
-                    android:orientation="vertical" android:layout_width="match_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:padding="10dp">
 
                     <TextView
-                        android:text="TextView"
+                        android:id="@+id/merch_product_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/merch_product_name"
-                        android:textColor="#333"
+                        android:padding="5dp"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:padding="5dp" />
+                        android:textColor="#333" />
 
                     <TextView
-                        android:text="TextView"
+                        android:id="@+id/merch_product_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/merch_product_price"
-                        android:textColor="#333"
+                        android:padding="5dp"
+                        android:text="TextView"
                         android:textAlignment="center"
-                        android:padding="5dp" />
+                        android:textColor="#333" />
 
                     <LinearLayout
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:orientation="horizontal"
                         android:padding="5dp">
 
                         <app.application.custom.NoDefaultSpinner
+                            android:id="@+id/merch_product_size"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/merch_product_size"
-                            android:prompt="@string/size"
                             android:layout_weight="1"
-                            android:padding="5dp" />
+                            android:padding="5dp"
+                            android:prompt="@string/size" />
 
                         <app.application.custom.NoDefaultSpinner
+                            android:id="@+id/merch_product_quantity"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/merch_product_quantity"
-                            android:prompt="@string/quantity"
                             android:layout_weight="1"
-                            android:padding="5dp" />
+                            android:padding="5dp"
+                            android:prompt="@string/quantity" />
                     </LinearLayout>
 
                     <com.beardedhen.androidbootstrap.BootstrapButton
+                        android:id="@+id/march_product_btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/march_product_btn"
-                        android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginRight="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
                         card_view:bootstrapBrand="regular"
                         card_view:bootstrapSize="md"
-                        card_view:buttonMode="regular"
                         card_view:bootstrapText="Add to Basket"
-                        card_view:showOutline="true"
-                        android:padding="5dp" />
+                        card_view:buttonMode="regular"
+                        card_view:showOutline="true" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>

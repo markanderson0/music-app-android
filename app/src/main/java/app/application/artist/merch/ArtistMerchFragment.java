@@ -33,9 +33,9 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class ArtistMerchFragment extends Fragment implements View.OnClickListener, MerchContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.no_merch)
     TextView noMerch;
@@ -55,8 +55,8 @@ public class ArtistMerchFragment extends Fragment implements View.OnClickListene
         merchPresenter.attachView(this);
 
         View footerView = inflater.inflate(R.layout.load_more, null);
-        BootstrapButton mLoadBtn = (BootstrapButton) footerView.findViewById(R.id.browse_load_btn);
-        mLoadBtn.setOnClickListener(this);
+        BootstrapButton loadBtn = (BootstrapButton) footerView.findViewById(R.id.browse_load_btn);
+        loadBtn.setOnClickListener(this);
         gridView.addFooterView(footerView);
 
         merchPresenter.getMerch(getArguments().getString("artist"), getArguments().getString("categoryId"), getArguments().getString("sortValue"));
@@ -74,11 +74,15 @@ public class ArtistMerchFragment extends Fragment implements View.OnClickListene
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            gridAdapter = new MerchGridViewAdapter(getContext(), R.layout.merch_grid_item, merchItems, gridView);
-            gridView.setAdapter(gridAdapter);
+            if(merchItems != null) {
+                gridAdapter = new MerchGridViewAdapter(getContext(), R.layout.merch_grid_item, merchItems, gridView);
+                gridView.setAdapter(gridAdapter);
+            }
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            gridAdapter = new MerchGridViewAdapter(getContext(), R.layout.merch_grid_item, merchItems, gridView);
-            gridView.setAdapter(gridAdapter);
+            if(merchItems != null) {
+                gridAdapter = new MerchGridViewAdapter(getContext(), R.layout.merch_grid_item, merchItems, gridView);
+                gridView.setAdapter(gridAdapter);
+            }
         }
     }
 
@@ -111,7 +115,7 @@ public class ArtistMerchFragment extends Fragment implements View.OnClickListene
         noMerch.setVisibility(View.GONE);
     }
 
-    @OnItemClick(R.id.gridView)
+    @OnItemClick(R.id.grid_view)
     public void onClick(View view) {
         if(view.getId() == R.id.browse_load_btn) {
             merchPresenter.getMerch(getArguments().getString("artist"), getArguments().getString("categoryId"), getArguments().getString("sortValue"));

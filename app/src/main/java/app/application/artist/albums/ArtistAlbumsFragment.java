@@ -26,9 +26,9 @@ import in.srain.cube.views.GridViewWithHeaderAndFooter;
  */
 public class ArtistAlbumsFragment extends Fragment implements ArtistAlbumsContract.View {
 
-    @BindView(R.id.gridView)
+    @BindView(R.id.grid_view)
     GridViewWithHeaderAndFooter gridView;
-    @BindView(R.id.progressBar)
+    @BindView(R.id.progress_bar)
     ProgressBar progressBar;
     @BindView(R.id.no_tickets)
     TextView noTickets;

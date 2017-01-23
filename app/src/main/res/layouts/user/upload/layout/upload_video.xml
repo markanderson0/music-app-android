@@ -1,96 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:text="Artist"
+            android:id="@+id/upload_artist_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/upload_artist_label"
+            android:layout_marginTop="10dp"
             android:paddingLeft="30dp"
-            android:layout_marginTop="10dp" />
+            android:text="Artist" />
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
             android:id="@+id/upload_artist_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingRight="30dp"
-            android:paddingLeft="30dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp" />
+            android:layout_marginRight="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp" />
 
         <TextView
-            android:text="Year"
+            android:id="@+id/upload_year_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/upload_year_label"
+            android:layout_marginTop="10dp"
             android:paddingLeft="30dp"
-            android:layout_marginTop="10dp" />
+            android:text="Year" />
 
         <com.beardedhen.androidbootstrap.BootstrapEditText
-            android:layout_height="wrap_content"
             android:id="@+id/upload_year_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingRight="30dp"
-            android:paddingLeft="30dp"
-            android:layout_width="match_parent"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp" />
-
-        <TextView
-            android:text="Events"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/upload_events_label"
+            android:layout_marginRight="30dp"
             android:paddingLeft="30dp"
-            android:layout_marginTop="10dp" />
+            android:paddingRight="30dp" />
 
         <TextView
+            android:id="@+id/upload_events_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="30dp"
+            android:text="Events" />
+
+        <TextView
             android:id="@+id/upload_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/back"
             android:padding="5dp" />
 
         <TextView
-            android:text="Select Songs"
+            android:id="@+id/upload_selected_songs_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/upload_selected_songs_label"
+            android:layout_marginTop="10dp"
             android:paddingLeft="30dp"
-            android:layout_marginTop="10dp" />
+            android:text="Select Songs" />
 
         <TextView
+            android:id="@+id/upload_selected_songs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/upload_selected_songs"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/back"
             android:padding="5dp" />
 
         <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/upload_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/upload_btn"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            app:bootstrapText="{fa_upload} Upload Video"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
             app:bootstrapBrand="regular"
             app:bootstrapSize="lg"
+            app:bootstrapText="{fa_upload} Upload Video"
             app:buttonMode="regular"
-            app:showOutline="true"/>
+            app:showOutline="true" />
 
     </LinearLayout>
+
 </ScrollView>

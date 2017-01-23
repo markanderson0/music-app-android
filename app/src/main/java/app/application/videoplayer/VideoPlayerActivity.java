@@ -196,7 +196,7 @@ public class VideoPlayerActivity extends Activity implements View.OnClickListene
             favouriteButton = (BootstrapButton) findViewById(R.id.favourite_video);
             favouriteButton.setOnClickListener(this);
 
-            mGridView = (HorizontalGridView) findViewById(R.id.gridView);
+            mGridView = (HorizontalGridView) findViewById(R.id.grid_view);
             mGridAdapter = new HorizontalGridAdapter(this, videos, videoId);
             mGridView.setAdapter(mGridAdapter);
         }

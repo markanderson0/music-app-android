@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    <!--<include layout="@layout/nav_header_main" />-->
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/main_content"
@@ -22,10 +20,10 @@
                 android:id="@+id/profile_tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabMode="scrollable"
-                app:tabTextAppearance="@style/TextAppearance.StatusBar.EventContent"
+                app:layout_scrollFlags="scroll|enterAlways"
                 app:tabIndicatorColor="?android:attr/textColorPrimaryDisableOnly"
-                app:layout_scrollFlags="scroll|enterAlways"/>
+                app:tabMode="scrollable"
+                app:tabTextAppearance="@style/TextAppearance.StatusBar.EventContent" />
 
         </android.support.design.widget.AppBarLayout>
 
@@ -33,7 +31,7 @@
             android:id="@+id/profile_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </android.support.design.widget.CoordinatorLayout>
 

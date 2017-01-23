@@ -23,7 +23,7 @@ public class ShowViewHolder extends ChildViewHolder {
     public ShowViewHolder(final View itemView) {
         super(itemView);
         locationTextView = ButterKnife.findById(itemView, R.id.list_item_artist_name);
-        gridView = ButterKnife.findById(itemView, R.id.gridView);
+        gridView = ButterKnife.findById(itemView, R.id.grid_view);
     }
 
     public void onBind(Show show) {

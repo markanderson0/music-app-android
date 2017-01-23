@@ -46,7 +46,7 @@ public class ArtistShowsFragmentTest {
     public void artistShows_DisplayCorrectSetlists_DisplayResults() {
         //First Show Setlist
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), withChild(withId(R.id.artist_shows_cardview)), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), withChild(withId(R.id.artist_shows_cardview)), isDisplayed()))
                 .atPosition(0)
                 .onChildView(withText("Setlist"))
                 .perform(click());
@@ -60,7 +60,7 @@ public class ArtistShowsFragmentTest {
 
         //Second Show Setlist
         onData(anything())
-                .inAdapterView(allOf(withId(R.id.gridView), withChild(withId(R.id.artist_shows_cardview)), isDisplayed()))
+                .inAdapterView(allOf(withId(R.id.grid_view), withChild(withId(R.id.artist_shows_cardview)), isDisplayed()))
                 .atPosition(1)
                 .onChildView(withText("Setlist"))
                 .perform(click());

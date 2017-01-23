@@ -1,103 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
-        android:text="Artist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/upload_artist_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:paddingLeft="30dp"
-        android:layout_marginTop="10dp" />
+        android:text="Artist" />
 
     <TextView
-        android:layout_height="wrap_content"
         android:id="@+id/upload_artist_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="5dp"
-        android:layout_width="match_parent"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/back"/>
-
-    <TextView
-        android:text="Year"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/upload_year_label"
-        android:paddingLeft="30dp"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:id="@+id/upload_year_input"
-        android:layout_gravity="center"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/back"/>
-
-    <TextView
-        android:text="Events"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/upload_events_label"
-        android:paddingLeft="30dp"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/upload_events_spinner"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:padding="5dp"
         android:background="@drawable/back"
-        android:spinnerMode="dialog"/>
+        android:padding="5dp" />
 
     <TextView
-        android:text="Selected Songs"
+        android:id="@+id/upload_year_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/upload_selected_songs_label"
+        android:layout_marginTop="10dp"
         android:paddingLeft="30dp"
-        android:layout_marginTop="10dp" />
+        android:text="Year" />
 
     <TextView
+        android:id="@+id/upload_year_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/back"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/upload_events_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="30dp"
+        android:text="Events" />
+
+    <TextView
+        android:id="@+id/upload_events_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/back"
+        android:padding="5dp"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:id="@+id/upload_selected_songs_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="30dp"
+        android:text="Selected Songs" />
+
+    <TextView
         android:id="@+id/upload_selected_songs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/back"
         android:padding="5dp" />
 
     <CheckBox
-        android:text="Terms"
+        android:id="@+id/upload_terms_cb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/upload_terms_cb"
         android:layout_marginLeft="25dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="40dp" />
+        android:text="Terms" />
 
     <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/upload_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/upload_btn"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        app:bootstrapText="{fa_upload} Upload Video"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
         app:bootstrapBrand="regular"
         app:bootstrapSize="lg"
+        app:bootstrapText="{fa_upload} Upload Video"
         app:buttonMode="regular"
-        app:showOutline="true"/>
+        app:showOutline="true" />
 
 </LinearLayout>
