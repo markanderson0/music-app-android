@@ -2,14 +2,19 @@ package app.application.dagger.module;
 
 import android.app.Application;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import javax.inject.Singleton;
 
 import app.application.artist.albums.data.ArtistAlbumsRepository;
 import app.application.artist.albums.data.ArtistAlbumsRepositoryImpl;
 import app.application.artist.albums.data.ArtistAlbumsService;
+import app.application.artist.shows.data.ArtistShowsDeserializer;
 import app.application.artist.shows.data.ArtistShowsRepository;
 import app.application.artist.shows.data.ArtistShowsRepositoryImpl;
 import app.application.artist.shows.data.ArtistShowsService;
+import app.application.artist.shows.data.model.ArtistShowsModel;
 import app.application.artist.topvideos.data.TopVideosRepository;
 import app.application.artist.topvideos.data.TopVideosRepositoryImpl;
 import app.application.artist.topvideos.data.TopVideosService;
@@ -117,7 +122,7 @@ public class AppModule {
 
     static UploadVideoService provideUploadVideoService() {
         if (uploadVideoService == null) {
-            uploadVideoService = getRetrofitInstance("http://api.setlist.fm").create(UploadVideoService.class);
+            uploadVideoService = getShowsRetrofitInstance("http://api.setlist.fm").create(UploadVideoService.class);
         }
         return uploadVideoService;
     }
@@ -193,7 +198,7 @@ public class AppModule {
 
     static ArtistShowsService provideArtistShowsService() {
         if (artistShowsService == null) {
-            artistShowsService = getRetrofitInstance("http://api.setlist.fm").create(ArtistShowsService.class);
+            artistShowsService = getShowsRetrofitInstance("http://api.setlist.fm").create(ArtistShowsService.class);
         }
         return artistShowsService;
     }
@@ -216,5 +221,22 @@ public class AppModule {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create());
         return retrofit.build();
+    }
+
+    static Retrofit getShowsRetrofitInstance(String baseUrl) {
+        Retrofit.Builder retrofit = new Retrofit.Builder().baseUrl(baseUrl)
+                .addConverterFactory(buildGsonConverter())
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create());
+        return retrofit.build();
+    }
+
+    private static GsonConverterFactory buildGsonConverter() {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+
+        // Adding custom deserializers
+        gsonBuilder.registerTypeAdapter(ArtistShowsModel.class, new ArtistShowsDeserializer());
+        Gson myGson = gsonBuilder.create();
+
+        return GsonConverterFactory.create(myGson);
     }
 }

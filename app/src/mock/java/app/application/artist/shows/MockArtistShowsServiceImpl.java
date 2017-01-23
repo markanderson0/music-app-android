@@ -1,58 +1,115 @@
 package app.application.artist.shows;
 
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import app.application.App;
 import app.application.artist.shows.data.ArtistShowsService;
+import app.application.artist.shows.data.model.Artist;
+import app.application.artist.shows.data.model.ArtistShowsModel;
+import app.application.artist.shows.data.model.City;
+import app.application.artist.shows.data.model.Coords;
+import app.application.artist.shows.data.model.Country;
+import app.application.artist.shows.data.model.Set;
+import app.application.artist.shows.data.model.Setlist;
+import app.application.artist.shows.data.model.Setlists;
+import app.application.artist.shows.data.model.Sets;
+import app.application.artist.shows.data.model.Song;
+import app.application.artist.shows.data.model.Venue;
 import retrofit2.http.Query;
 import rx.Observable;
-
-import static app.application.App.getContext;
 
 /**
  * Mock implementation of the {@link ArtistShowsService}
  */
 public class MockArtistShowsServiceImpl implements ArtistShowsService {
     @Override
-    public Observable<Object> getArtist(@Query("artistName") String artistName, @Query("p") String p) {
-        Object artist = new Object();
-        try {
-            InputStream inputStream = App.getContext().getAssets().open("mock-data/artist/shows/artistshowsArtistResponse.json");
-            JsonReader reader = new JsonReader(new InputStreamReader(inputStream, "UTF-8"));
-            reader.beginArray();
-            Gson gson = new Gson();
-            while (reader.hasNext()) {
-                artist = gson.fromJson(reader, Object.class);
-            }
-            reader.endArray();
-            reader.close();
-            return Observable.just(artist);
-        } catch (IOException e) {
-            throw new RuntimeException("This should never happen", e);
-        }
+    public Observable<ArtistShowsModel> getArtist(@Query("artistName") String artistName, @Query("p") String p) {
+        return Observable.just(getArtistShowsModel());
     }
 
     @Override
-    public Observable<Object> getArtistShows(@Query("artistMbid") String artistMbid, @Query("p") String p) {
-        Object shows = new Object();
-        try {
-            InputStream inputStream = getContext().getAssets().open("mock-data/artist/shows/artistshowsShowsResponse.json");
-            JsonReader reader = new JsonReader(new InputStreamReader(inputStream, "UTF-8"));
-            reader.beginArray();
-            Gson gson = new Gson();
-            while (reader.hasNext()) {
-                shows = gson.fromJson(reader, Object.class);
-            }
-            reader.endArray();
-            reader.close();
-            return Observable.just(shows);
-        } catch (IOException e) {
-            throw new RuntimeException("This should never happen", e);
-        }
+    public Observable<ArtistShowsModel> getArtistShows(@Query("artistMbid") String artistMbid, @Query("p") String p) {
+        return Observable.just(getArtistShowsModel());
+    }
+
+    private ArtistShowsModel getArtistShowsModel() {
+        return new ArtistShowsModel(getSetlists());
+    }
+
+    private Setlists getSetlists() {
+        return new Setlists(getSetlistList(), "1", "1");
+    }
+
+    private List<Setlist> getSetlistList() {
+        List<Setlist> setlists = new ArrayList<>();
+        setlists.add(new Setlist(
+                "123",
+                "tour",
+                "01-01-2017",
+                getVenue(),
+                getSetlistArtist(),
+                getArtist1Sets()
+        ));
+        setlists.add(new Setlist(
+                "234",
+                "tour",
+                "02-01-2017",
+                getVenue(),
+                getSetlistArtist(),
+                getArtist2Sets()
+        ));
+        return setlists;
+    }
+
+    private Venue getVenue() {
+        return new Venue("venue", getCity());
+    }
+
+    private City getCity() {
+        return new City(
+                "city",
+                "cityState",
+                new Country("country"),
+                new Coords("1", "1")
+        );
+    }
+
+    private Artist getSetlistArtist() {
+        return new Artist("artist1", "sortName", "mbid");
+    }
+
+    private Sets getArtist1Sets() {
+        return new Sets(getArtist1SetList());
+    }
+
+    private List<Set> getArtist1SetList() {
+        List<Set> setList = new ArrayList<>();
+        setList.add(new Set(getArtist1Songs(), ""));
+        return setList;
+    }
+
+    private List<Song> getArtist1Songs() {
+        List<Song> songs = new ArrayList<>();
+        songs.add(new Song("song1", null, null, ""));
+        songs.add(new Song("song2", null, null, ""));
+        songs.add(new Song("song3", null, null, ""));
+        return songs;
+    }
+
+    private Sets getArtist2Sets() {
+        return new Sets(getArtist2SetList());
+    }
+
+    private List<Set> getArtist2SetList() {
+        List<Set> setList = new ArrayList<>();
+        setList.add(new Set(getArtist2Songs(), ""));
+        return setList;
+    }
+
+    private List<Song> getArtist2Songs() {
+        List<Song> songs = new ArrayList<>();
+        songs.add(new Song("song4", null, null, ""));
+        songs.add(new Song("song5", null, null, ""));
+        return songs;
     }
 }

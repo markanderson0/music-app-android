@@ -17,12 +17,12 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.beardedhen.androidbootstrap.BootstrapEditText;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
-import app.application.custom.CustomBootstrapColors;
 import app.application.R;
+import app.application.custom.CustomBootstrapColors;
 import app.application.dagger.DaggerInjector;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -168,7 +168,7 @@ public class UploadVideoFragment extends Fragment implements UploadVideoContract
     }
 
     @Override
-    public void setEvents(ArrayList<String> eventIds, ArrayList<String> events) {
+    public void setEvents(List<String> eventIds, List<String> events) {
         eventsTextView.setOnClickListener((View view) -> {
             LinearLayout eventsLayout = new LinearLayout(getContext());
             eventsLayout.setOrientation(LinearLayout.VERTICAL);
@@ -201,7 +201,7 @@ public class UploadVideoFragment extends Fragment implements UploadVideoContract
     }
 
     @Override
-    public void setSongs(ArrayList<String> songs, ArrayList<String> selectedSongs) {
+    public void setSongs(List<String> songs, List<String> selectedSongs) {
         selectedSongsTextView.setOnClickListener((View view) -> {
             LinearLayout setlistLayout = new LinearLayout(getContext());
             setlistLayout.setOrientation(LinearLayout.VERTICAL);

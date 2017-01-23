@@ -3,6 +3,7 @@ package app.application.artist.shows.data;
 import java.io.IOException;
 
 import app.application.artist.shows.ArtistShowsUtil;
+import app.application.artist.shows.data.model.ArtistShowsModel;
 import rx.Observable;
 
 /**
@@ -20,6 +21,7 @@ import rx.Observable;
 public class ArtistShowsRepositoryImpl implements ArtistShowsRepository {
 
     ArtistShowsService artistShowsService;
+    String mbid;
 
     public ArtistShowsRepositoryImpl(ArtistShowsService artistShowsService) {
         this.artistShowsService = artistShowsService;
@@ -42,14 +44,13 @@ public class ArtistShowsRepositoryImpl implements ArtistShowsRepository {
      * @return the result of the getArtistShows method
      */
     @Override
-    public Observable<Object> getShows(String artistName, String p){
+    public Observable<ArtistShowsModel> getShows(String artistName, String p){
         return Observable.defer(() -> artistShowsService.getArtist(artistName, p).concatMap(
                 searchArtist -> {
-                    String mbid = getMbid(searchArtist, artistName);
+                    mbid = ArtistShowsUtil.getMbid(searchArtist, artistName);
                     if (!mbid.equals("")) {
                         return artistShowsService.getArtistShows(mbid, p);
-                    }
-                    else {
+                    } else {
                         return Observable.error(null);
                     }
                 }));
@@ -59,13 +60,12 @@ public class ArtistShowsRepositoryImpl implements ArtistShowsRepository {
      * Returns the shows found from the query using the artists MBID. If the user has no internet
      * connection an IOException is thrown by retrofit.
      *
-     * @param artistMbid MusicBrainz identifier for the artist
      * @param p page number
      * @return an observable containing the artists previous shows
      */
     @Override
-    public Observable<Object> getArtistShows(String artistMbid, String p) {
-        return Observable.defer(() -> artistShowsService.getArtistShows(artistMbid, p)).retryWhen(
+    public Observable<ArtistShowsModel> getArtistShows(String p) {
+        return Observable.defer(() -> artistShowsService.getArtistShows(mbid, p)).retryWhen(
                 observable ->
                         observable.flatMap(o -> {
                             if (o instanceof IOException) {
@@ -73,17 +73,5 @@ public class ArtistShowsRepositoryImpl implements ArtistShowsRepository {
                             }
                             return Observable.error(o);
                         }));
-    }
-
-    /**
-     * Returns the artists MBID that is extracted in {@link ArtistShowsUtil}s getMBID method.
-     *
-     * @param searchArtist the result of the getArtist api call
-     * @param artist the artists name
-     * @return the artists MBID
-     */
-    public String getMbid(Object searchArtist, String artist){
-        String mbid = ArtistShowsUtil.getMBID(searchArtist, artist);
-        return mbid;
     }
 }

@@ -82,34 +82,50 @@ public class ArtistShowsGridViewAdapter extends ArrayAdapter<Setlist> {
         final Setlist setlist = gridData.get(position);
         holder.artistLabel.setText(setlist.getVenue().getName());
         holder.venueLabel.setText(setlist.getEventDate());
-        holder.dateLabel.setText(setlist.getVenue().getCity().getName() + "," + setlist.getVenue().getCity().getStateCode() + " " + setlist.getVenue().getCity().getCountry().getName());
+        if (setlist.getVenue().getCity().getCountry().getName().equals("United States")) {
+            holder.dateLabel.setText(
+                    setlist.getVenue().getCity().getName() + ", " +
+                            setlist.getVenue().getCity().getStateCode() + " " +
+                            setlist.getVenue().getCity().getCountry().getName()
+            );
+        } else {
+            holder.dateLabel.setText(
+                    setlist.getVenue().getCity().getName() + ", " +
+                            setlist.getVenue().getCity().getCountry().getName()
+            );
+        }
         holder.locationLabel.setText(setlist.getTour());
         holder.setlistButton.setText("Setlist");
         holder.setlistButton.setOnClickListener((View v) -> {
-                LinearLayout setlistLayout = new LinearLayout(getContext());
-                setlistLayout.setOrientation(LinearLayout.VERTICAL);
-                ArrayList<String> songs = new ArrayList<>();
-                if(setlist.getSets().getSet().get(0).getSong().size() > 0) {
-                    for (int i = 0; i < setlist.getSets().getSet().get(0).getSong().size(); i++) {
-                        LayoutInflater layoutInflater = LayoutInflater.from(getContext());
-                        View trackView = layoutInflater.inflate(R.layout.artist_setlist_row, null);
-                        TextView trackNum = ButterKnife.findById(trackView, R.id.track_num);
-                        TextView songName = ButterKnife.findById(trackView, R.id.song_name);
-                        trackNum.setText(String.valueOf(i+1) + ".");
+            LinearLayout setlistLayout = new LinearLayout(getContext());
+            setlistLayout.setOrientation(LinearLayout.VERTICAL);
+            ArrayList<String> songs = new ArrayList<>();
+            if (setlist.getSets().getSet().get(0).getSong().size() > 0) {
+                for (int i = 0; i < setlist.getSets().getSet().get(0).getSong().size(); i++) {
+                    LayoutInflater layoutInflater = LayoutInflater.from(getContext());
+                    View trackView = layoutInflater.inflate(R.layout.artist_setlist_row, null);
+                    TextView trackNum = ButterKnife.findById(trackView, R.id.track_num);
+                    TextView songName = ButterKnife.findById(trackView, R.id.song_name);
+                    trackNum.setText(String.valueOf(i + 1) + ".");
+                    if (setlist.getSets().getSet().get(0).getSong().get(i).getCover() == null) {
                         songName.setText(setlist.getSets().getSet().get(0).getSong().get(i).getName());
-                        setlistLayout.addView(trackView);
-                        songs.add(setlist.getSets().getSet().get(0).getSong().get(i).getName());
+                    } else {
+                        songName.setText(setlist.getSets().getSet().get(0).getSong().get(i).getName()
+                                + " (" + setlist.getSets().getSet().get(0).getSong().get(i).getCover().getName() + " cover)");
                     }
-                    new MaterialDialog.Builder(context)
-                            .customView(setlistLayout, true)
-                            .show();
-                } else {
-                    songs.add("No Setlist Available.");
-                    new MaterialDialog.Builder(context)
-                            .items(songs)
-                            .itemsGravity(GravityEnum.CENTER)
-                            .show();
+                    setlistLayout.addView(trackView);
+                    songs.add(setlist.getSets().getSet().get(0).getSong().get(i).getName());
                 }
+                new MaterialDialog.Builder(context)
+                        .customView(setlistLayout, true)
+                        .show();
+            } else {
+                songs.add("No Setlist Available.");
+                new MaterialDialog.Builder(context)
+                        .items(songs)
+                        .itemsGravity(GravityEnum.CENTER)
+                        .show();
+            }
         });
         return row;
     }

@@ -2,6 +2,7 @@ package app.application.user.upload.uploadvideo.data;
 
 import java.io.IOException;
 
+import app.application.artist.shows.data.model.ArtistShowsModel;
 import rx.Observable;
 
 /**
@@ -25,7 +26,7 @@ public class UploadVideoRepositoryImpl implements UploadVideoRepository {
      * @return events for the given artists that happened on the requested year
      */
     @Override
-    public Observable<Object> getEvent(String artistMbid, String year, String p) {
+    public Observable<ArtistShowsModel> getEvent(String artistMbid, String year, String p) {
         return Observable.defer(() -> uploadVideoService.getEvent(artistMbid, year, p)).retryWhen(
                 observable ->
                         observable.flatMap(o -> {
@@ -44,7 +45,7 @@ public class UploadVideoRepositoryImpl implements UploadVideoRepository {
      * @return songs for the given event
      */
     @Override
-    public Observable<Object> getSongs(String eventId) {
+    public Observable<ArtistShowsModel> getSongs(String eventId) {
         return Observable.defer(() -> uploadVideoService.getSongs(eventId)).retryWhen(
                 observable ->
                         observable.flatMap(o -> {

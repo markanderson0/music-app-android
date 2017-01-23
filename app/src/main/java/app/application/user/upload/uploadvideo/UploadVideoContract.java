@@ -1,7 +1,8 @@
 package app.application.user.upload.uploadvideo;
 
-import java.util.ArrayList;
+import java.util.List;
 
+import app.application.artist.shows.data.model.ArtistShowsModel;
 import app.application.base.MvpPresenter;
 import app.application.base.MvpView;
 
@@ -18,9 +19,9 @@ public interface UploadVideoContract {
 
         void getEvent(String eventYear, String page);
 
-        void setEvents(ArrayList<String> eventIds, ArrayList<String> events);
+        void setEvents(List<String> eventIds, List<String> events);
 
-        void setSongs(ArrayList<String> songs, ArrayList<String> selectedSongs);
+        void setSongs(List<String> songs, List<String> selectedSongs);
 
         void initializeSelection();
     }
@@ -35,9 +36,9 @@ public interface UploadVideoContract {
 
         void getSongs(String eventId);
 
-        void parseEvents(Object searchEvent);
+        void parseEvents(ArtistShowsModel searchEvent);
 
-        void parseSongs(Object searchSongs);
+        void parseSongs(ArtistShowsModel searchSongs);
 
         void initializeSelection();
     }

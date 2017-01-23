@@ -35,8 +35,8 @@ public class UploadVideoFragmentTest {
         onView(withId(R.id.upload_year_input)).perform(typeText("2017")).check(matches(withText("2017")));
 
         onView(withId(R.id.upload_events)).perform(click());
-        onView(allOf(withId(R.id.row_item), withText("01-01-2016, ven1"))).perform(click());
-        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2016, ven1")));
+        onView(allOf(withId(R.id.row_item), withText("01-01-2017, venue"))).perform(click());
+        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2017, venue")));
 
         onView(withId(R.id.upload_selected_songs)).perform(click());
         onView(allOf(withId(R.id.row_item), withText("song1"))).perform(click());
@@ -46,7 +46,7 @@ public class UploadVideoFragmentTest {
 
         onView(withId(R.id.upload_artist_input)).check(matches(withText("artist1")));
         onView(withId(R.id.upload_year_input)).check(matches(withText("2017")));
-        onView(withId(R.id.upload_events_spinner)).check(matches(withText("01-01-2016, ven1")));
+        onView(withId(R.id.upload_events_spinner)).check(matches(withText("01-01-2017, venue")));
         onView(withId(R.id.upload_selected_songs)).check(matches(withText("song1")));
     }
 
@@ -56,8 +56,8 @@ public class UploadVideoFragmentTest {
         onView(withId(R.id.upload_year_input)).perform(typeText("2017")).check(matches(withText("2017")));
 
         onView(withId(R.id.upload_events)).perform(click());
-        onView(allOf(withId(R.id.row_item), withText("01-01-2016, ven1"))).perform(click());
-        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2016, ven1")));
+        onView(allOf(withId(R.id.row_item), withText("01-01-2017, venue"))).perform(click());
+        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2017, venue")));
 
         onView(withId(R.id.upload_selected_songs)).perform(click());
         onView(allOf(withId(R.id.row_item), withText("song1"))).perform(click());
@@ -74,8 +74,8 @@ public class UploadVideoFragmentTest {
         onView(withId(R.id.upload_year_input)).perform(typeText("2017")).check(matches(withText("2017")));
 
         onView(withId(R.id.upload_events)).perform(click());
-        onView(allOf(withId(R.id.row_item), withText("01-01-2016, ven1"))).perform(click());
-        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2016, ven1")));
+        onView(allOf(withId(R.id.row_item), withText("01-01-2017, venue"))).perform(click());
+        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2017, venue")));
 
         onView(withId(R.id.upload_selected_songs)).perform(click());
         onView(allOf(withId(R.id.row_item), withText("song1"))).perform(click());
@@ -92,15 +92,15 @@ public class UploadVideoFragmentTest {
         onView(withId(R.id.upload_year_input)).perform(typeText("2017")).check(matches(withText("2017")));
 
         onView(withId(R.id.upload_events)).perform(click());
-        onView(allOf(withId(R.id.row_item), withText("01-01-2016, ven1"))).perform(click());
-        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2016, ven1")));
+        onView(allOf(withId(R.id.row_item), withText("01-01-2017, venue"))).perform(click());
+        onView(withId(R.id.upload_events)).check(matches(withText("01-01-2017, venue")));
 
         onView(withId(R.id.upload_selected_songs)).perform(click());
         onView(allOf(withId(R.id.row_item), withText("song1"))).perform(click());
         onView(withId(R.id.upload_selected_songs)).check(matches(withText("song1")));
 
         onView(withId(R.id.upload_events)).perform(click());
-        onView(allOf(withId(R.id.row_item), withText("02-01-2016, ven2"))).perform(click());
+        onView(allOf(withId(R.id.row_item), withText("02-01-2017, venue"))).perform(click());
 
         onView(withId(R.id.upload_selected_songs)).check(matches(withText("")));
     }

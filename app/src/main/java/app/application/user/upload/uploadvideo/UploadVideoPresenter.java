@@ -1,13 +1,14 @@
 package app.application.user.upload.uploadvideo;
 
-import com.google.gson.internal.LinkedTreeMap;
-
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import app.application.artist.shows.ArtistShowsUtil;
 import app.application.artist.shows.data.ArtistShowsRepository;
+import app.application.artist.shows.data.model.ArtistShowsModel;
+import app.application.artist.shows.data.model.Setlist;
 import app.application.artist.shows.data.model.Song;
 import app.application.base.BasePresenter;
 import app.application.search.data.SearchRepository;
@@ -16,8 +17,6 @@ import app.application.user.upload.uploadvideo.data.UploadVideoRepository;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-
-import static java.lang.Integer.parseInt;
 
 /**
  * Listens to user actions from the UI ({@link UploadVideoFragment}), retrieves the data and updates
@@ -82,7 +81,7 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
         addSubscription(artistShowsRepository.getShows(artistName, page)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<Object>() {
+                .subscribe(new Subscriber<ArtistShowsModel>() {
                     @Override
                     public void onCompleted() {
 
@@ -94,8 +93,8 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
                     }
 
                     @Override
-                    public void onNext(Object searchArtistShows) {
-                        mbid = ArtistShowsUtil.getMBID(searchArtistShows, artistName);
+                    public void onNext(ArtistShowsModel searchArtistShows) {
+                        mbid = ArtistShowsUtil.getMbid(searchArtistShows, artistName);
                         getView().setMbid(mbid);
                         if (!mbid.equals("") && eventYear.length() == 4) {
                             getView().getEvent(eventYear, page);
@@ -110,7 +109,7 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
         addSubscription(uploadVideoRepository.getEvent(mbid, eventYear, pageNumber)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<Object>() {
+                .subscribe(new Subscriber<ArtistShowsModel>() {
                     @Override
                     public void onCompleted() {
 
@@ -122,7 +121,7 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
                     }
 
                     @Override
-                    public void onNext(Object searchEvent) {
+                    public void onNext(ArtistShowsModel searchEvent) {
                         parseEvents(searchEvent);
                     }
                 }));
@@ -133,7 +132,7 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
         addSubscription(uploadVideoRepository.getSongs(eventId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<Object>() {
+                .subscribe(new Subscriber<ArtistShowsModel>() {
                     @Override
                     public void onCompleted() {
 
@@ -145,7 +144,7 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
                     }
 
                     @Override
-                    public void onNext(Object searchSongs) {
+                    public void onNext(ArtistShowsModel searchSongs) {
                         parseSongs(searchSongs);
                     }
                 }));
@@ -162,17 +161,14 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
      * @param searchEvent events returned from the api call
      */
     @Override
-    public void parseEvents(Object searchEvent) {
-        LinkedTreeMap artistShowsMap = (LinkedTreeMap) searchEvent;
-        LinkedTreeMap setlistsMap = (LinkedTreeMap) artistShowsMap.get("setlists");
-        int totalPages = parseInt((String) setlistsMap.get("@total")) / 20;
-        ArrayList<LinkedTreeMap> setlistMap = (ArrayList<LinkedTreeMap>) setlistsMap.get("setlist");
-        for (int i = 0; i < setlistMap.size(); i++) {
-            if (!eventIds.contains(setlistMap.get(i).get("@id"))) {
-                if (setlistMap.get(i).get("venue") != null) {
-                    eventIds.add((String) setlistMap.get(i).get("@id"));
-                    LinkedTreeMap venueMap = (LinkedTreeMap) setlistMap.get(i).get("venue");
-                    events.add(setlistMap.get(i).get("@eventDate") + ", " + venueMap.get("@name"));
+    public void parseEvents(ArtistShowsModel searchEvent) {
+        int totalPages = Integer.parseInt(searchEvent.getSetlists().getTotal()) / 20;
+        for (int i = 0; i < searchEvent.getSetlists().getSetlist().size(); i++) {
+            Setlist setlist = searchEvent.getSetlists().getSetlist().get(i);
+            if (!eventIds.contains(setlist.getId())) {
+                if (setlist.getVenue() != null) {
+                    eventIds.add(setlist.getId());
+                    events.add(setlist.getEventDate() + ", " + setlist.getVenue().getName());
                 }
             }
         }
@@ -190,10 +186,8 @@ public class UploadVideoPresenter extends BasePresenter<UploadVideoContract.View
      * @param searchSongs songs that where played at an event.
      */
     @Override
-    public void parseSongs(Object searchSongs) {
-        LinkedTreeMap artistShowsMap = (LinkedTreeMap) searchSongs;
-        LinkedTreeMap setlistsMap = (LinkedTreeMap) artistShowsMap.get("setlist");
-        ArrayList<Song> setlist = ArtistShowsUtil.getSetlist(setlistsMap.get("sets"));
+    public void parseSongs(ArtistShowsModel searchSongs) {
+        List<Song> setlist = searchSongs.getSetlists().getSetlist().get(0).getSets().getSet().get(0).getSong();
         songs = new ArrayList<>();
         selectedSongs = new ArrayList<>();
         for (Song song : setlist) {

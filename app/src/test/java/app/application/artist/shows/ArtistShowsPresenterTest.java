@@ -64,15 +64,15 @@ public class ArtistShowsPresenterTest {
                 .thenReturn(new MockSearchServiceImpl().searchArtists(ARTIST, TYPE, LIMIT));
         when(artistShowsRepository.getShows(anyString(), anyString()))
                 .thenReturn(new MockArtistShowsServiceImpl().getArtist(ARTIST, PAGE));
-        when(artistShowsRepository.getArtistShows(anyString(), anyString()))
+        when(artistShowsRepository.getArtistShows(anyString()))
                 .thenReturn(new MockArtistShowsServiceImpl().getArtistShows(MBID, PAGE));
         artistShowsPresenter.getArtistName(ARTIST);
         artistShowsPresenter.getArtist(ARTIST, PAGE);
         artistShowsPresenter.getArtistShows(PAGE);
         verify(view, times(4)).showLoading();
-        verify(view, times(6)).hideLoading();
+        verify(view, times(3)).hideLoading();
         verify(view).setCurrentPage(anyString());
-        verify(view).showShows(any());
+        verify(view, times(3)).showShows(any());
         verify(view, never()).showError(anyString());
     }
 
@@ -81,9 +81,8 @@ public class ArtistShowsPresenterTest {
         String errorMsg = "There was a problem loading this page";
         when(artistShowsRepository.getShows(anyString(), anyString()))
                 .thenReturn(Observable.error(new IOException(errorMsg)));
-        when(artistShowsRepository.getArtistShows(anyString(), anyString()))
+        when(artistShowsRepository.getArtistShows(anyString()))
                 .thenReturn(Observable.error(new IOException(errorMsg)));
-//        artistShowsPresenter.getArtistName("artist1");
         artistShowsPresenter.getArtist(ARTIST, PAGE);
         artistShowsPresenter.getArtistShows(PAGE);
         verify(view, times(2)).showLoading();

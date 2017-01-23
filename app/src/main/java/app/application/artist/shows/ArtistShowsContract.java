@@ -37,7 +37,5 @@ public interface ArtistShowsContract {
         void getArtist(String artistName, String p);
 
         void getArtistShows(String page);
-
-        ArrayList<Setlist> mapArtistShows(Object searchArtistShows);
     }
 }
