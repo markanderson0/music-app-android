@@ -5,20 +5,49 @@ Android version of the music app.
 
 This application allows users to find various details about artists such as:
 
- - if they have any tickets available
- - what merch they have on sale
+ - what tickets they have on sale
+ - what merch they have available
  - setlists of their previous shows
  - what albums they have released.
 
 ----------
 
-Details of each Feature
+Details of each feature
 ---
+Artist Profile
+-
+- This is a feature page for an individual artist.
+- View the artists most popular videos, all videos, tickets, merch, previous shows and albums.
+
+**Note**: All data for top videos is stored locally. Tickets data is loaded via the TicketMaster API. Merch data is loaded via the Ebay API. Previous shows data is loaded via the setlist.fm API.
+Albums data is loaded via the Spotify API.
+
+<img src="screenshots/artist/artistTopVideos.png" width="33%" />
+<img src="screenshots/artist/artistVideos.png" width="33%" />
+<img src="screenshots/artist/artistVideosExpanded.png" width="33%" />
+<img src="screenshots/artist/artistTickets.png" width="33%" />
+<img src="screenshots/artist/artistMerch.png" width="33%" />
+<img src="screenshots/artist/artistShows.png" width="33%" />
+<img src="screenshots/artist/artistShowsSetlist.png" width="33%" />
+<img src="screenshots/artist/artistAlbums.png" width="33%" />
+
+Video Player
+-
+- View a selected video.
+- View the videos in the same playlist.
+
+**Note**: All data for videos is stored locally.
+
+<img src="screenshots/videoplayer/videoplayer.png" width="33%" />
+
 Browse
 -
 - Browse for artists by selecting a genre from the grid and find artists associated with that genre.
 
 **Note**: Data for the genre and artist tiles are stored locally.
+
+<img src="screenshots/browse/browseNavigation.png" width="33%" />
+<img src="screenshots/browse/browseGenre.png" width="33%" />
 
 Tickets
 -
@@ -28,6 +57,11 @@ Tickets
 
 **Note**: Data for the top tickets is stored locally and all other ticket data is loaded from the TicketMaster API.
 
+<img src="screenshots/tickets/topTickets.png" width="33%" />
+<img src="screenshots/tickets/ticketsGenre.png" width="33%" />
+<img src="screenshots/tickets/artistTicketsList.png" width="33%" />
+<img src="screenshots/tickets/artistTicketsMap.png" width="33%" />
+
 Merch
 -
 - Find artist merch by searching from the available product categories.
@@ -35,19 +69,16 @@ Merch
 
 **Note**: All data for merch is loaded via the Ebay API.
 
+<img src="screenshots/merch/merchCategory.png" width="33%" />
+<img src="screenshots/merch/merchProduct.png" width="33%" />
+
 Search
 -
 - Search for artists using the search bar located on the left sidebar to find artists with the desired name.
 
 **Note**: All data for searching is loaded via the Spotify API.
 
-Artist Profile
--
-- This is a feature page for an individual artist.
-- View the artists most popular videos, all videos, tickets, merch, previous shows and albums.
-
-**Note**: All data for top videos is stored locally. Tickets data is loaded via the TicketMaster API. Merch data is loaded via the Ebay API. Previous shows data is loaded via the setlist.fm API.
-Albums data is loaded via the Spotify API.
+<img src="screenshots/search/search.png" width="33%" />
 
 User Profile
 -
@@ -56,11 +87,19 @@ User Profile
 
 **Note**: All data for videos, following and favourites is stored locally.
 
+<img src="screenshots/user/profile/profileVideos.png" width="33%" />
+<img src="screenshots/user/profile/profileVideosExpanded.png" width="33%" />
+<img src="screenshots/user/profile/profileFollowing.png" width="33%" />
+<img src="screenshots/user/profile/profileFavourites.png" width="33%" />
+<img src="screenshots/user/profile/profileFavouritesExpanded.png" width="33%" />
+
 Following
 -
 - View a list of the artists that you are currently following.
 
 **Note**: All data for following is stored locally.
+
+<img src="screenshots/user/following/following.png" width="33%" />
 
 Upload
 -
@@ -77,6 +116,16 @@ Upload
 
 **Note**: All data for by My Uploads is stored locally. The delete video button isnt currently functional and is only for show. Data for uploading a video is loaded from the setlist.fm API.
 
+<img src="screenshots/user/upload/uploadVideo.png" width="33%" />
+<img src="screenshots/user/upload/uploadVideoShowsDialog.png" width="33%" />
+<img src="screenshots/user/upload/uploadVideoSongsDialog.png" width="33%" />
+<img src="screenshots/user/upload/uploadVideoComplete.png" width="33%" />
+<img src="screenshots/user/upload/uploadVideoConfirmDialog.png" width="33%" />
+<img width="33%" />
+<img src="screenshots/user/upload/myUploads.png" width="33%" />
+<img src="screenshots/user/upload/myUploadsExpanded.png" width="33%" />
+<img src="screenshots/user/upload/myUploadsDialog.png" width="33%" />
+
 Settings
 -
 - Users can change their email address and date of birth.
@@ -84,6 +133,11 @@ Settings
 
 
 **Note**: The Login/Logout and Signup features arent currently functional and are only for show.
+
+<img src="screenshots/user/settings/editProfile.png" width="33%" />
+<img src="screenshots/user/settings/changePassword.png" width="33%" />
+<img src="screenshots/user/settings/editPrivacy.png" width="33%" />
+<img src="screenshots/user/settings/emailNotifications.png" width="33%" />
 
 ---
 
@@ -110,7 +164,6 @@ TODO
 Libraries to investigate:
 -
 - Robolectric for testing.
-- Icepick for saving instance state.
 - LeakCanary to catch any possible memory leaks.
 - Lombok for reducing boilerplate code in models.
 
