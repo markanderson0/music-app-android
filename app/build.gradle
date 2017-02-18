@@ -86,6 +86,11 @@ dependencies {
     //Exoplayer
     compile 'com.google.android.exoplayer:exoplayer:r2.0.4'
 
+    //LeakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
     //Stetho
 //    compile 'com.facebook.stetho:stetho:1.4.1'
 //    compile 'com.facebook.stetho:stetho-okhttp3:1.4.1'

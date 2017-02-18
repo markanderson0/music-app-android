@@ -3,6 +3,8 @@ package app.application;
 import android.app.Application;
 import android.content.Context;
 
+import com.squareup.leakcanary.LeakCanary;
+
 public class App extends Application {
 
     public static Context context;
@@ -11,6 +13,10 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return;
+        }
+        LeakCanary.install(this);
     }
 
     public static App get(Context context) {
