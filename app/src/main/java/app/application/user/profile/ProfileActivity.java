@@ -1,12 +1,16 @@
 package app.application.user.profile;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.widget.ImageView;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,15 +31,33 @@ public class ProfileActivity extends DrawerActivity {
     TabLayout tabLayout;
     @BindView(R.id.profile_viewpager)
     ViewPager viewPager;
+    @BindView(R.id.profile_image)
+    ImageView profileImageView;
+    @BindView(R.id.profile_pic)
+    ImageView profilePicImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setFullLayoutId(R.layout.profile_toolbar);
         setContentView(R.layout.profile);
         ButterKnife.bind(this);
+        setTitle("testUser");
         viewPager.setOffscreenPageLimit(0);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+        profileImageView.setImageDrawable(getDrawableImage("img/sky.jpg"));
+        profilePicImageView.setImageDrawable(getDrawableImage("img/profile.png"));
+    }
+
+    private Drawable getDrawableImage(String imagePath) {
+        InputStream ims = null;
+        try {
+            ims = this.getAssets().open(imagePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return Drawable.createFromStream(ims, null);
     }
 
     private void setupViewPager(ViewPager viewPager) {

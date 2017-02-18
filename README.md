@@ -164,13 +164,11 @@ TODO
 Libraries to investigate:
 -
 - Robolectric for testing.
-- LeakCanary to catch any possible memory leaks.
 - Lombok for reducing boilerplate code in models.
 
 Features to add (This list is ever expanding and in no particular order):
 -
 - File upload on the video uploads page.
-- Banner picture on the users profile page.
 - Add cue points menu to my uploads video dialog.
 - Tick indicator when selecting songs to add when uploading a video.
 - Link to other users profiles.
