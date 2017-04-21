@@ -2,6 +2,7 @@ package app.application.shared;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
@@ -13,8 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.AwesomeTextView;
-import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,17 +28,17 @@ import butterknife.ButterKnife;
 /**
  * Assigns the grid data to the grid item view
  */
-public class HorizontalGridAdapter extends RecyclerView.Adapter<HorizontalGridAdapter.SimpleViewHolder>{
+public class HorizontalGridAdapter extends RecyclerView.Adapter<HorizontalGridAdapter.SimpleViewHolder> {
     private Context context;
     private List<Videos> videos;
     private String videoId;
 
-    public HorizontalGridAdapter(Context context, List<Videos> videos){
+    public HorizontalGridAdapter(Context context, List<Videos> videos) {
         this.context = context;
         this.videos = videos;
     }
 
-    public HorizontalGridAdapter(Context context, List<Videos> videos, String videoId){
+    public HorizontalGridAdapter(Context context, List<Videos> videos, String videoId) {
         this.context = context;
         this.videos = videos;
         this.videoId = videoId;
@@ -74,23 +76,30 @@ public class HorizontalGridAdapter extends RecyclerView.Adapter<HorizontalGridAd
         holder.timeTextView.setText(item.getTime());
         holder.viewsTextView.setMarkdownText(String.valueOf(item.getViews()) + " {fa_eye} ");
         holder.songsTextView.setText(item.getSongsString());
-        Picasso.with(context).load(item.getImage()).fit().into(holder.imageView);
+        try {
+            InputStream ims = context.getAssets().open(item.getImage());
+            Drawable d = Drawable.createFromStream(ims, null);
+            holder.imageView.setImageDrawable(d);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //Picasso.with(context).load(item.getImage()).fit().into(holder.imageView);
 
         holder.gridItem.setOnClickListener((View view) -> {
-                Intent videoPlayerIntent = new Intent(view.getContext(), VideoPlayerActivity.class);
-                videoPlayerIntent.putExtra("videoId", item.getId());
-                videoPlayerIntent.putExtra("video", item.getFile());
-                videoPlayerIntent.putExtra("title", item.getSongsString());
-                videoPlayerIntent.putExtra("views", String.valueOf(item.getViews()));
-                videoPlayerIntent.putExtra("audioRating", String.valueOf(item.getAudio()));
-                videoPlayerIntent.putExtra("videoRating", String.valueOf(item.getVideo()));
-                Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList("videos", (ArrayList<? extends Parcelable>) videos);
-                videoPlayerIntent.putExtras(bundle);
-                view.getContext().startActivity(videoPlayerIntent);
+            Intent videoPlayerIntent = new Intent(view.getContext(), VideoPlayerActivity.class);
+            videoPlayerIntent.putExtra("videoId", item.getId());
+            videoPlayerIntent.putExtra("video", item.getFile());
+            videoPlayerIntent.putExtra("title", item.getSongsString());
+            videoPlayerIntent.putExtra("views", String.valueOf(item.getViews()));
+            videoPlayerIntent.putExtra("audioRating", String.valueOf(item.getAudio()));
+            videoPlayerIntent.putExtra("videoRating", String.valueOf(item.getVideo()));
+            Bundle bundle = new Bundle();
+            bundle.putParcelableArrayList("videos", (ArrayList<? extends Parcelable>) videos);
+            videoPlayerIntent.putExtras(bundle);
+            view.getContext().startActivity(videoPlayerIntent);
         });
 
-        if(item.getId().equals(videoId)){
+        if (item.getId().equals(videoId)) {
             holder.videoPlaying.setVisibility(View.VISIBLE);
         }
     }

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.AwesomeTextView;
-import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import app.application.R;
@@ -88,7 +90,14 @@ public class TopVideosViewAdapter extends ArrayAdapter<TopVideosModel> {
         holder.timeTextView.setText(item.time);
         holder.viewsTextView.setMarkdownText(String.valueOf(item.views) + " {fa_eye} ");
         holder.songsTextView.setText(item.songsString);
-        Picasso.with(context).load(item.image).fit().into(holder.imageView);
+        try {
+            InputStream ims = context.getAssets().open(item.getImage());
+            Drawable d = Drawable.createFromStream(ims, null);
+            holder.imageView.setImageDrawable(d);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //Picasso.with(context).load(item.image).fit().into(holder.imageView);
 
         return row;
     }
@@ -108,11 +117,11 @@ public class TopVideosViewAdapter extends ArrayAdapter<TopVideosModel> {
             float rightPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, r.getDisplayMetrics());
 
             RelativeLayout.LayoutParams viewsParams = (RelativeLayout.LayoutParams) holder.viewsTextView.getLayoutParams();
-            viewsParams.setMargins(0, (int)px, (int)rightPx, 0);
+            viewsParams.setMargins(0, (int) px, (int) rightPx, 0);
             holder.viewsTextView.setLayoutParams(viewsParams);
 
             RelativeLayout.LayoutParams timeParams = (RelativeLayout.LayoutParams) holder.timeTextView.getLayoutParams();
-            timeParams.setMargins(0, (int)px, 0, 0);
+            timeParams.setMargins(0, (int) px, 0, 0);
             holder.timeTextView.setLayoutParams(timeParams);
 
         } else {
@@ -125,11 +134,11 @@ public class TopVideosViewAdapter extends ArrayAdapter<TopVideosModel> {
         }
     }
 
-    private int getWidth(){
+    private int getWidth() {
         Configuration configuration = context.getResources().getConfiguration();
         int screenWidthDp = configuration.screenWidthDp;
         columns = Math.ceil(screenWidthDp / 210.00);
-        if(columns > 5) {
+        if (columns > 5) {
             tablet = true;
             columns = Math.ceil(screenWidthDp / 400.00);
             return (screenWidthDp - (5 * (int) columns)) / (int) columns;

@@ -3,6 +3,7 @@ package app.application.user.profile.favourites;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.AwesomeTextView;
-import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import app.application.R;
@@ -70,12 +72,19 @@ public class FavouritesGridViewAdapter extends ArrayAdapter<Video> {
 
         Video item = gridData.get(position);
         holder.userTextView.setText("Uploaded By " + item.getUser());
-        holder.userTextView.setPaintFlags(holder.userTextView.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
+        holder.userTextView.setPaintFlags(holder.userTextView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         holder.ratingTextView.setMarkdownText(" {fa_volume_off} " + String.valueOf(item.getAudio()) + " {fa_video_camera} " + String.valueOf(item.video));
         holder.timeTextView.setText(item.getTime());
         holder.viewsTextView.setMarkdownText(String.valueOf(item.getViews()) + " {fa_eye} ");
         holder.songsTextView.setText(item.getSongsString());
-        Picasso.with(context).load(item.getImage()).fit().into(holder.imageView);
+        try {
+            InputStream ims = context.getAssets().open(item.getImage());
+            Drawable d = Drawable.createFromStream(ims, null);
+            holder.imageView.setImageDrawable(d);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //Picasso.with(context).load(item.getImage()).fit().into(holder.imageView);
 
         return row;
     }
