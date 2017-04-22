@@ -1,7 +1,6 @@
 package app.application.user.upload.myuploads;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.support.v17.leanback.widget.HorizontalGridView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,9 +13,8 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.beardedhen.androidbootstrap.AwesomeTextView;
 import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 import app.application.R;
@@ -26,12 +24,12 @@ import butterknife.ButterKnife;
 /**
  * Assigns the videos to the view
  */
-public class MyUploadsHorizontalGridAdapter extends RecyclerView.Adapter<MyUploadsHorizontalGridAdapter.SimpleViewHolder> {
+public class MyUploadsHorizontalGridAdapter extends RecyclerView.Adapter<MyUploadsHorizontalGridAdapter.SimpleViewHolder>{
     private Context context;
     private List<Videos> videos;
     private MaterialDialog materialDialog;
 
-    public MyUploadsHorizontalGridAdapter(Context context, List<Videos> videos) {
+    public MyUploadsHorizontalGridAdapter(Context context, List<Videos> videos){
         this.context = context;
         this.videos = videos;
     }
@@ -51,6 +49,7 @@ public class MyUploadsHorizontalGridAdapter extends RecyclerView.Adapter<MyUploa
             songsTextView = ButterKnife.findById(view, R.id.video_songs);
             imageView = ButterKnife.findById(view, R.id.video_image);
             gridItem = ButterKnife.findById(view, R.id.grid_item);
+
         }
     }
 
@@ -68,26 +67,19 @@ public class MyUploadsHorizontalGridAdapter extends RecyclerView.Adapter<MyUploa
         holder.timeTextView.setText(item.getTime());
         holder.viewsTextView.setMarkdownText(String.valueOf(item.getViews()) + " {fa_eye} ");
         holder.songsTextView.setText(item.getSongsString());
-        try {
-            InputStream ims = context.getAssets().open(item.getImage());
-            Drawable d = Drawable.createFromStream(ims, null);
-            holder.imageView.setImageDrawable(d);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        //Picasso.with(context).load(item.getImage()).fit().into(holder.imageView);
+        Picasso.with(context).load(item.getImage()).fit().into(holder.imageView);
 
         holder.gridItem.setOnClickListener((View view) -> {
-            LayoutInflater layoutInflater = LayoutInflater.from(context);
-            View editView = layoutInflater.inflate(R.layout.myuploads_dialog, null);
-            BootstrapButton deleteBtn = ButterKnife.findById(editView, R.id.my_uploads_delete_btn);
-            deleteBtn.setOnClickListener((View v) -> {
-                materialDialog.dismiss();
-            });
+                LayoutInflater layoutInflater = LayoutInflater.from(context);
+                View editView = layoutInflater.inflate(R.layout.myuploads_dialog, null);
+                BootstrapButton deleteBtn = ButterKnife.findById(editView, R.id.my_uploads_delete_btn);
+                deleteBtn.setOnClickListener((View v) -> {
+                        materialDialog.dismiss();
+                });
 
-            materialDialog = new MaterialDialog.Builder(context)
-                    .customView(editView, true)
-                    .show();
+                materialDialog = new MaterialDialog.Builder(context)
+                        .customView(editView, true)
+                        .show();
         });
     }
 

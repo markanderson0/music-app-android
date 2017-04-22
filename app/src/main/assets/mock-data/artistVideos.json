@@ -1,7 +1,7 @@
 {
   "data":[
     {
-      "vid": "img/preview/1.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "08-07-2016",
@@ -9,7 +9,7 @@
       "location": "Oeiras, Portugal"
     },
     {
-      "vid": "img/preview/2.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
       "songs": ["Everything In Its Right Place", "Burn the Witch", "Karma Police", "Airbag", "How To Disappear Completely", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "02-07-2016",
@@ -17,7 +17,7 @@
       "location": "St. Gallen, Switzerland"
     },
     {
-      "vid": "img/preview/3.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
       "songs": ["Burn the Witch", "Everything In Its Right Place", "How To Disappear Completely", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "17-06-2016",
@@ -25,7 +25,7 @@
       "location": "Reykjavik, Iceland"
     },
     {
-      "vid": "img/preview/1.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "03-06-2016",
@@ -33,7 +33,7 @@
       "location": "Barcelona, Spain"
     },
     {
-      "vid": "img/preview/2.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "01-06-2016",
@@ -41,7 +41,7 @@
       "location": "Lyon, France"
     },
     {
-      "vid": "img/preview/3.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "28-05-2016",
@@ -49,7 +49,7 @@
       "location": "London, United Kingdom"
     },
     {
-      "vid": "img/preview/1.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "27-05-2016",
@@ -57,7 +57,7 @@
       "location": "London, United Kingdom"
     },
     {
-      "vid": "img/preview/2.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "26-05-2016",
@@ -65,7 +65,7 @@
       "location": "London, United Kingdom"
     },
     {
-      "vid": "img/preview/3.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "24-05-2016",
@@ -73,7 +73,7 @@
       "location": "Paris, France"
     },
     {
-      "vid": "img/preview/1.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "23-05-2016",
@@ -81,7 +81,7 @@
       "location": "Paris, France"
     },
     {
-      "vid": "img/preview/2.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "21-05-2016",
@@ -89,7 +89,7 @@
       "location": "Amsterdam, Netherlands"
     },
     {
-      "vid": "img/preview/3.jpg",
+      "vid": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
       "songs": ["Everything In Its Right Place", "How To Disappear Completely", "Burn the Witch", "My Iron Lung", "Creep"],
       "time": "5:00",
       "date": "20-05-2016",

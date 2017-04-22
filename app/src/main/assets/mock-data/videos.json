@@ -17,7 +17,7 @@
               {
                 "id": "vid123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Everything In Its Right Place",
                   "How To Disappear Completely",
@@ -34,7 +34,7 @@
               {
                 "id": "vid234",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Karma Police"
                 ],
@@ -47,7 +47,7 @@
               {
                 "id": "vid345",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Desert Island Disk",
                   "2 + 2 = 5"
@@ -61,7 +61,7 @@
               {
                 "id": "vid456",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Paranoid Android"
                 ],
@@ -80,7 +80,7 @@
               {
                 "id": "vid567",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Burn the Witch"
                 ],
@@ -93,7 +93,7 @@
               {
                 "id": "vid678",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Daydreaming"
                 ],
@@ -106,7 +106,7 @@
               {
                 "id": "vid789",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Decks Dark"
                 ],
@@ -119,7 +119,7 @@
               {
                 "id": "vid890",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Desert Island Disk"
                 ],
@@ -132,7 +132,7 @@
               {
                 "id": "vid0123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "My Iron Lung"
                 ],
@@ -145,7 +145,7 @@
               {
                 "id": "vid0124",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Talk Show Host"
                 ],
@@ -158,7 +158,7 @@
               {
                 "id": "vid0125",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Lotus Flower"
                 ],
@@ -171,7 +171,7 @@
               {
                 "id": "vid0126",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "The Gloaming"
                 ],
@@ -184,7 +184,7 @@
               {
                 "id": "vid0127",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Exit Music (for a Film)"
                 ],
@@ -197,7 +197,7 @@
               {
                 "id": "vid0128",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "The Numbers"
                 ],
@@ -210,7 +210,7 @@
               {
                 "id": "vid0129",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Identikit"
                 ],
@@ -223,7 +223,7 @@
               {
                 "id": "vid0120",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Reckoner"
                 ],
@@ -236,7 +236,7 @@
               {
                 "id": "vid01201",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Everything in Its Right Place"
                 ],
@@ -249,7 +249,7 @@
               {
                 "id": "vid01211",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Idioteque"
                 ],
@@ -276,7 +276,7 @@
               {
                 "id": "v123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Everything In Its Right Place",
                   "How To Disappear Completely",
@@ -299,7 +299,7 @@
               {
                 "id": "vid567",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Burn the Witch"
                 ],
@@ -312,7 +312,7 @@
               {
                 "id": "vid678",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Daydreaming"
                 ],
@@ -325,7 +325,7 @@
               {
                 "id": "vid789",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Decks Dark"
                 ],
@@ -352,7 +352,7 @@
               {
                 "id": "vi123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Everything In Its Right Place",
                   "My Iron Lung",
@@ -367,7 +367,7 @@
               {
                 "id": "vid567",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Burn the Witch"
                 ],
@@ -386,7 +386,7 @@
               {
                 "id": "vid678",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Daydreaming"
                 ],
@@ -399,7 +399,7 @@
               {
                 "id": "vid789",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Decks Dark"
                 ],
@@ -433,7 +433,7 @@
               {
                 "id": "vid123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Intro Jam",
                   "Can't Stop",
@@ -450,7 +450,7 @@
               {
                 "id": "vid234",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "The Adventures of Rain Dance Maggie"
                 ],
@@ -463,7 +463,7 @@
               {
                 "id": "vid345",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Right on Time",
                   "Tell Me Baby"
@@ -477,7 +477,7 @@
               {
                 "id": "vid456",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Otherside"
                 ],
@@ -496,7 +496,7 @@
               {
                 "id": "vid567",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "The Getaway"
                 ],
@@ -509,7 +509,7 @@
               {
                 "id": "vid678",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Go Robot"
                 ],
@@ -522,7 +522,7 @@
               {
                 "id": "vid789",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Californication"
                 ],
@@ -535,7 +535,7 @@
               {
                 "id": "vid890",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Under the Bridge"
                 ],
@@ -548,7 +548,7 @@
               {
                 "id": "vid0123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Detroit"
                 ],
@@ -561,7 +561,7 @@
               {
                 "id": "vid0124",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "By the Way"
                 ],
@@ -574,7 +574,7 @@
               {
                 "id": "vid0125",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Soul to Squeeze"
                 ],
@@ -587,7 +587,7 @@
               {
                 "id": "vid0126",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Give It Away"
                 ],
@@ -614,7 +614,7 @@
               {
                 "id": "v123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Intro Jam",
                   "Can't Stop",
@@ -637,7 +637,7 @@
               {
                 "id": "vid567",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "If You Have to Ask"
                 ],
@@ -650,7 +650,7 @@
               {
                 "id": "vid678",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "Nobody Weird Like Me"
                 ],
@@ -663,7 +663,7 @@
               {
                 "id": "vid789",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Otherside"
                 ],
@@ -690,7 +690,7 @@
               {
                 "id": "vi123",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Blood Sugar Sex Magik",
                   "Right on Time",
@@ -705,7 +705,7 @@
               {
                 "id": "vid567",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/1.jpg",
+                "image": "https://cdn.pixabay.com/photo/2015/07/30/17/24/audience-868074_960_720.jpg",
                 "songs": [
                   "Factory of Faith"
                 ],
@@ -724,7 +724,7 @@
               {
                 "id": "vid678",
                 "file": "http://static.videogular.com/assets/videos/videogular.mp4",
-                "image": "img/preview/2.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/21/12/50/audience-1845231_960_720.jpg",
                 "songs": [
                   "The Getaway"
                 ],
@@ -737,7 +737,7 @@
               {
                 "id": "vid789",
                 "file": "https://vjs.zencdn.net/v/oceans.mp4",
-                "image": "img/preview/3.jpg",
+                "image": "https://cdn.pixabay.com/photo/2016/11/29/07/36/audience-1868137_960_720.jpg",
                 "songs": [
                   "Detroit",
                   "By the Way",

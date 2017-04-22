@@ -77,7 +77,7 @@ public class GridViewAdapter extends ArrayAdapter<GridItem> {
         }
         GridItem item = gridData.get(position);
         holder.titleTextView.setText(Html.fromHtml(item.getTitle()));
-        if (item.getImage().contains("img/")) {
+        if(item.getImage().contains("img/browse/")) {
             try {
                 InputStream ims = getContext().getAssets().open(item.getImage());
                 Drawable d = Drawable.createFromStream(ims, null);
@@ -91,8 +91,8 @@ public class GridViewAdapter extends ArrayAdapter<GridItem> {
         return row;
     }
 
-    private void setGridWidths() {
-        if (tablet) {
+    private void setGridWidths(){
+        if(tablet) {
             holder.imageView.setAdjustViewBounds(true);
             holder.gridView.setColumnWidth(width * 2);
             holder.imageView.getLayoutParams().height = 400;
@@ -108,11 +108,11 @@ public class GridViewAdapter extends ArrayAdapter<GridItem> {
         }
     }
 
-    private int getWidth() {
+    private int getWidth(){
         Configuration configuration = context.getResources().getConfiguration();
         int screenWidthDp = configuration.screenWidthDp;
         columns = Math.ceil(screenWidthDp / 210.00);
-        if (columns > 5) {
+        if(columns > 5) {
             tablet = true;
             columns = Math.ceil(screenWidthDp / 400.00);
             return (screenWidthDp - (5 * (int) columns)) / (int) columns;
